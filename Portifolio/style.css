@@ -1,8 +1,23 @@
 body {
-    background-color: #070707;
-    color: #F6F6F6;
-}
-
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url(assets/imagem_fundo.jpg);
+    background-size: cover;
+    justify-content: center;
+    
+    }
+    
+    .containerGlobal {
+    width: 1000px;
+    height: 500px;
+    background-color:#1D232E;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    }
+/* 
 strong {
     color: aqua;
 }
@@ -10,7 +25,8 @@ strong {
 p {
     text-align: center;
 }
+*/
 
 img {
-    text-align: center;
-}
+    width: 207px;
+} 
