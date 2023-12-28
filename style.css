@@ -99,8 +99,30 @@ p {
 
 img {
     width: 207px;
-} 
+}
 
 
-/* Computador */
-@media screen and (min-width: 500px){}
+/*  
+Dentro desse contexto/bolha de código, está todo o CSS para telas de até 375px 
+width: largura
+*/
+@media screen and (max-width: 375px){
+    .containerEsquerdo .tituloDescricao {
+
+        font-size: 18px;
+        padding-left: 0;
+    }
+    img {
+        width: 107px;
+    }
+    .containerEsquerdo .textoDescricao {
+        text-align: justify;
+        padding-left: 0;
+        line-height: 1.8;
+        font-size: 0.9em;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
