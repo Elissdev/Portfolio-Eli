@@ -106,14 +106,14 @@ img {
 Dentro desse contexto/bolha de código, está todo o CSS para telas de até 375px 
 width: largura
 */
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px){
     .containerEsquerdo .tituloDescricao {
 
-        font-size: 18px;
+        font-size: 28px;
         padding-left: 0;
     }
     img {
-        width: 107px;
+        width: 114px;
     }
     .containerEsquerdo .textoDescricao {
         text-align: justify;
@@ -122,7 +122,7 @@ width: largura
         font-size: 0.9em;
     }
     p {
-        font-size: 16px;
+        font-size: 26px;
     }
 }
 
