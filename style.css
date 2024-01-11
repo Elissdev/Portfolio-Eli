@@ -109,11 +109,11 @@ width: largura
 @media screen and (max-width: 425px){
     .containerEsquerdo .tituloDescricao {
 
-        font-size: 28px;
+        font-size: 26px;
         padding-left: 0;
     }
     img {
-        width: 114px;
+        width: 112px;
     }
     .containerEsquerdo .textoDescricao {
         text-align: justify;
@@ -122,7 +122,7 @@ width: largura
         font-size: 0.9em;
     }
     p {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
 
