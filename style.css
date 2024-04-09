@@ -106,23 +106,57 @@ img {
 Dentro desse contexto/bolha de código, está todo o CSS para telas de até 375px 
 width: largura
 */
-@media screen and (max-width: 425px){
+@media screen and (max-width: 375px){
+     .containerGlobal{
+        width: 100%;
+        height: 100%;
+        background-color:#1D232E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0;
+        }
+    
+    .containerEsquerdo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }}
+
     .containerEsquerdo .tituloDescricao {
 
-        font-size: 26px;
-        padding-left: 0;
+        font-size: 22px;
+        padding-left: 20px;
+        line-height: 1.6;
     }
     img {
-        width: 124px;
+        width: 180px;
     }
     .containerEsquerdo .textoDescricao {
-        text-align: justify;
-        padding-left: 0;
-        line-height: 1.8;
+
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.6;
         font-size: 0.9em;
+
     }
+
+    .estiloArcoDecorativo{
+        position: absolute;
+        top: -5%;
+        left: 55%; 
+        max-width: 50%;
+    }
+
+    .containerContatos img {
+        width: 42px;
+    }
+
     p {
-        font-size: 24px;
+        font-size: 22px;
     }
-}
+
 
