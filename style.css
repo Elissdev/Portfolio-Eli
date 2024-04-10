@@ -159,4 +159,24 @@ width: largura
         font-size: 22px;
     }
 
+    @media screen and (max-width: 425px){
+        .containerGlobal{
+            width: 100%;
+            height: 100%;
+            background-color:#1D232E;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5% 0;
+            }
+        
+        .containerEsquerdo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+    }
 
