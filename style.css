@@ -66,9 +66,6 @@ p {
 
 .containerImagens {
     position: relative;
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 .estiloArcoDecorativo {
@@ -116,8 +113,36 @@ width: largura
         justify-content: center;
         align-items: center;
         margin: 5% 0;
-        }
-    
+        padding-left: 20px;
+        line-height: 1.6;
+    }
+    img {
+        width: 180px;
+    }
+    .containerEsquerdo .textoDescricao {
+
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.6;
+        font-size: 0.9em;
+
+    }
+
+    .estiloArcoDecorativo{
+        position: absolute;
+        top: -5%;
+        left: 55%; 
+        max-width: 50%;
+    }
+
+    .containerContatos img {
+        width: 42px;
+    }
+
+    p {
+        font-size: 22px;
+    }
     .containerEsquerdo {
         width: 100%;
         display: flex;
@@ -129,13 +154,13 @@ width: largura
 
         font-size: 22px;
         padding-left: 20px;
+        padding-right: 20px;
         line-height: 1.6;
     }
     img {
         width: 180px;
     }
     .containerEsquerdo .textoDescricao {
-
         font-size: 16px;
         padding-left: 20px;
         padding-right: 20px;
