@@ -221,16 +221,14 @@ width: largura
     margin-bottom: 3rem; /* Cria um espaço em branco fundamental entre o título e os projetos */
 }
 
-/* A NOSSA "ESTANTE" */
+/* A NOSSA "ESTANTE" (Versão Desktop) */
 .lista-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    /* Reduzimos o tamanho mínimo para 250px para caberem os 3 cards novamente! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; 
     margin-top: 2rem;
-    
-    /* AS DUAS LINHAS NOVAS PARA O CELULAR: */
-    justify-content: center; /* Centraliza a grade inteira na tela */
-    padding: 0 1rem; /* Dá um respiro nas laterais para o card não grudar na borda da tela */
+    padding: 0 4rem; /* Mantemos o respiro elegante que você pediu */
 }
 
 /* OS NOSSOS "LIVROS" (Cards) */
@@ -332,21 +330,34 @@ width: largura
    ========================================= */
 
 @media screen and (max-width: 768px) {
+    
+    /* 1. CORREÇÃO DOS CARDS (Trocando Grid por Flex para centralização absoluta) */
     .lista-projetos {
-        /* Força a ter exatamente 1 coluna ocupando todo o espaço disponível */
-        grid-template-columns: 1fr; 
-        
-        /* Força o alinhamento perfeito do conteúdo */
-        justify-items: center; 
-        
-        /* Zera margens problemáticas e coloca um respiro igual nas laterais */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Trava no centro do eixo X */
+        padding: 0 1.5rem; 
         margin-left: 0;
         margin-right: 0;
-        padding: 0 1.5rem; 
     }
 
     .projeto-card {
-        width: 100%; /* Garante que o card estique até o limite do padding */
-        box-sizing: border-box; /* Impede que a borda "vaze" do tamanho */
+        width: 100%;
+        max-width: 380px; /* Impede o card de esticar demais e mantém elegante no meio */
+        box-sizing: border-box;
+    }
+
+    /* 2. CORREÇÃO DO RODAPÉ E DA FRASE DE QA */
+    .containerDireito {
+        width: 100%; /* Força a caixa a ocupar a tela toda, tirando o "aperto" */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza a foto e o texto */
+        text-align: center;
+    }
+
+    .containerDireito div {
+        white-space: nowrap; /* A mágica que impede a frase de quebrar no meio! */
+        text-align: center;
     }
 }
