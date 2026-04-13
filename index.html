@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="assets/estrela.png">
     <title>Portifólio Eli</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -19,21 +20,92 @@
         <div class="containerEsquerdo">
 
             <p class="tituloDescricao">
-                Minha jornada começa aqui,<br> sinta-se a vontade para
-                <strong>me conhecer melhor!</strong>
-            <p>
+                Elevando a qualidade do software,<br> 
+                <strong>um teste de cada vez.</strong>
+            </p>
 
-            <img src="assets/forma_destaque_texto.png" alt="Destaque de texto">    
+            <img src="assets/forma_destaque_texto.png" alt="Destaque de texto">
 
             <p class="textoDescricao">
-            Olá! Sou a Eli, estudante de Tecnologia e amante de
-            Pets, busco qualidade em meu desenvolvimento e
-            aperfeiçoamento na área de QA, colocando em prática cada
-            aprendizado e descobrindo novas maneiras de expandir
-            meu conhecimento. Que tal trocarmos idéias? :D
+                Olá! Sou a Eli, Analista de QA e apaixonada por engenharia de software. Minha missão diária vai muito além de caçar bugs, eu construo barreiras de qualidade. Atuo na estruturação de processos ágeis, na criação de testes automatizados e na implementação de integração contínua para prevenir regressões. Acredito que a qualidade não é uma etapa final, mas sim o alicerce de qualquer sistema confiável. Que tal trocarmos ideias sobre tecnologia? :D
             </p>
 
         </div>
+
+        <div class="tech-stack">
+    <p>Minha Caixa de Ferramentas:</p>
+    <div class="tech-icons">
+        <i class="devicon-cypress-plain colored" title="Cypress"></i>
+        <i class="devicon-phpunit-plain colored" title="PHPUnit"></i>
+        <i class="devicon-docker-plain colored" title="Docker"></i>
+        <i class="devicon-php-plain colored" title="PHP"></i>
+        <i class="devicon-githubactions-plain colored" title="GitHub Actions"></i>
+        <i class="devicon-linux-plain colored" title="Pop!_OS / Linux"></i>
+        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+    </div>
+</div>
+
+<section id="projetos" class="container">
+        <h2 class="titulo-secao">Minha Trajetória e Projetos em QA</h2>
+        
+        <div class="lista-projetos">
+            
+            <article class="projeto-card">
+                <h3>Automação E2E e Relatórios Visuais</h3>
+                <p><strong>O Desafio:</strong> Automatizar a validação de fluxos de pagamento em sistemas web e gerar evidências claras para a equipe.</p>
+                <p><strong>O que fiz:</strong> Desenvolvi suítes de testes com Cypress e criei scripts para gerar relatórios automatizados em PDF, utilizando Mochawesome e Puppeteer.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Integração Contínua (CI) com GitHub Actions</h3>
+                <p><strong>O Desafio:</strong> Prevenir que códigos com falhas fossem integrados ao sistema principal durante as revisões da equipe.</p>
+                <p><strong>O que fiz:</strong> Configurei uma esteira de CI no GitHub Actions que executa automaticamente a suíte de testes do PHPUnit a cada novo Pull Request.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Orquestração de Ambientes com Docker</h3>
+                <p><strong>O Desafio:</strong> Padronizar o ambiente de testes para evitar o famoso problema de "na minha máquina funciona".</p>
+                <p><strong>O que fiz:</strong> Estruturei ambientes conteinerizados usando Docker e Docker Compose, isolando as ferramentas de automação e o banco de dados.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Testabilidade de Código com Mocks</h3>
+                <p><strong>O Desafio:</strong> Testar regras de negócio complexas de forma rápida, sem depender de bancos de dados ou serviços externos.</p>
+                <p><strong>O que fiz:</strong> Apliquei o uso de dublês de testes (Mocks) utilizando a biblioteca Prophecy para o PHP, garantindo um isolamento perfeito nos testes unitários.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Análise de Vulnerabilidades (OWASP)</h3>
+                <p><strong>O Desafio:</strong> Identificar brechas de segurança e apoiar a conformidade das aplicações internas.</p>
+                <p><strong>O que fiz:</strong> Realizei varreduras de segurança e documentei relatórios técnicos focados na prevenção de regressões utilizando o OWASP ZAP.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Laboratório de Testes Unitários (PHPUnit)</h3>
+                <p><strong>O Desafio:</strong> Aprofundar o domínio na validação de código a nível de unidade em aplicações PHP de forma independente.</p>
+                <p><strong>O que fiz:</strong> Desenvolvi um projeto pessoal focado na criação de casos de teste estruturados, utilizando asserções avançadas para garantir a qualidade do código.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Ambientes Isolados (Docker QA)</h3>
+                <p><strong>O Desafio:</strong> Criar e gerenciar ambientes de testes que fossem totalmente portáteis e replicáveis, simulando cenários reais.</p>
+                <p><strong>O que fiz:</strong> Configurei imagens e volumes personalizados com Docker, com foco em subir infraestruturas de teste e bancos de dados em questão de segundos.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Simulador de Negociação (BDD + Docker)</h3>
+                <p><strong>O Desafio:</strong> Unir testes guiados por comportamento (BDD) com uma infraestrutura isolada para um simulador complexo.</p>
+                <p><strong>O que fiz:</strong> Estruturei cenários de teste em linguagem natural (Gherkin) para garantir que as regras de negócio fossem validadas automaticamente dentro de um ambiente Dockerizado.</p>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Documentação Técnica e Fluxos (POPs)</h3>
+                <p><strong>O Desafio:</strong> Padronizar as rotinas de teste e garantir que a evolução da qualidade do sistema fosse transparente e rastreável.</p>
+                <p><strong>O que fiz:</strong> Elaborei Procedimentos Operacionais Padrão (POPs) e construí fluxogramas técnicos detalhados para guiar as etapas de desenvolvimento e a geração de relatórios de qualidade.</p>
+            </article>
+
+        </div>
+    </section>
 
         <!-- Quadrado azul -->
         <div class="containerDireito">
@@ -51,12 +123,11 @@
             <div class="containerContatos">
 
                 <!-- Linkedin - Github e E-mail -->
-                <a href="https://www.linkedin.com/in/elissandra-santos-750b9b108" target="_blank"><img src="assets/icon_linkedin.png"></a>
+                <a href="https://www.linkedin.com/in/elissandra-silva-750b9b108/" target="_blank"><img src="assets/icon_linkedin.png"></a>
 
                 <a href="https://github.com/Elissdev" target="_blank"><img src="assets/icon_github.png"></a>
 
-                <a href="mailto:elissandra.dev@gmail.com" target="_blank"><img src="assets/icon_gmail2.png"></a>
-
+                <a href="mailto:elissandra.dev@gmail.com"><img src="assets/icon_gmail2.png"></a>
             </div>
         </div>
 

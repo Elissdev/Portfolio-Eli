@@ -205,3 +205,121 @@ width: largura
         
     }
 
+    /* =========================================
+   SEÇÃO DE PROJETOS (QA Portfolio)
+   ========================================= */
+
+#projetos {
+    margin-top: 4rem;
+    margin-bottom: 5rem; /* Essa é a mágica que vai empurrar a sua foto lá para baixo! */
+    width: 100%; /* Garante que a seção ocupe a largura toda na tela */
+}
+
+/* Centraliza o título e dá um respiro antes da grade */
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 3rem; /* Cria um espaço em branco fundamental entre o título e os projetos */
+}
+
+/* A NOSSA "ESTANTE" */
+.lista-projetos {
+    display: grid;
+    /* Aqui está a fórmula mágica para ficar lado a lado no PC e empilhado no celular: */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* O espaço em branco entre um card e outro */
+    margin-top: 2rem;
+}
+
+/* OS NOSSOS "LIVROS" (Cards) */
+.projeto-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Uma borda bem sutil */
+    border-radius: 10px; /* Deixa os cantinhos arredondados */
+    padding: 1.5rem; /* Espaço interno para o texto não grudar na borda */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Prepara a animação */
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.projeto-card:hover {
+    transform: translateY(-5px); /* Faz o card "flutuar" um pouquinho para cima */
+    border-color: #00d2df; /* Colore a borda com o tom verde-água do seu site */
+}
+
+/* Título de cada projeto */
+.projeto-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+/* Textos de Desafio e O que fiz */
+.projeto-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Um cinza bem clarinho para facilitar a leitura */
+    margin-bottom: 0.8rem;
+}
+
+/* Destacando as palavras em negrito */
+.projeto-card strong {
+    color: #00d2df; /* Mesma cor de destaque que você usa na sua apresentação */
+}
+
+/* =========================================
+   AJUSTES DO RODAPÉ / PERFIL INFERIOR
+   ========================================= */
+
+/* Centraliza a imagem, os textos e os contatos que estão abaixo dos projetos */
+.fotoPerfil {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem na tela */
+}
+
+/* O contêiner dos botõezinhos (LinkedIn, GitHub) */
+.containerContatos {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Junta os ícones no meio */
+    gap: 2rem; /* Cria um espaço bonito entre os botões, fica mais responsivo que o space-evenly */
+}
+
+/* =========================================
+   CAIXA DE FERRAMENTAS (TECH STACK)
+   ========================================= */
+
+.tech-stack {
+    margin-top: 2rem;
+    text-align: left; /* Alinha com o seu texto inicial */
+}
+
+.tech-stack p {
+    font-size: 0.9rem;
+    color: #00d2df; /* Cor de destaque que você já usa */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap; /* Para os ícones pularem de linha se não couberem */
+    gap: 20px;
+    font-size: 40px; /* Tamanho dos ícones */
+}
+
+/* Efeito para os ícones ficarem mais discretos e brilharem no mouse */
+.tech-icons i {
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-icons i:hover {
+    opacity: 1;
+    transform: scale(1.2); /* Dá um zoom no ícone ao passar o mouse */
+}
