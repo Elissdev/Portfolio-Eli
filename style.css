@@ -224,10 +224,13 @@ width: largura
 /* A NOSSA "ESTANTE" */
 .lista-projetos {
     display: grid;
-    /* Aqui está a fórmula mágica para ficar lado a lado no PC e empilhado no celular: */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem; /* O espaço em branco entre um card e outro */
+    gap: 1.5rem;
     margin-top: 2rem;
+    
+    /* AS DUAS LINHAS NOVAS PARA O CELULAR: */
+    justify-content: center; /* Centraliza a grade inteira na tela */
+    padding: 0 1rem; /* Dá um respiro nas laterais para o card não grudar na borda da tela */
 }
 
 /* OS NOSSOS "LIVROS" (Cards) */
