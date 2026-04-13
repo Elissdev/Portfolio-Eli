@@ -326,3 +326,27 @@ width: largura
     opacity: 1;
     transform: scale(1.2); /* Dá um zoom no ícone ao passar o mouse */
 }
+
+/* =========================================
+   AJUSTE DE RESPONSIVIDADE (MOBILE)
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    .lista-projetos {
+        /* Força a ter exatamente 1 coluna ocupando todo o espaço disponível */
+        grid-template-columns: 1fr; 
+        
+        /* Força o alinhamento perfeito do conteúdo */
+        justify-items: center; 
+        
+        /* Zera margens problemáticas e coloca um respiro igual nas laterais */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 1.5rem; 
+    }
+
+    .projeto-card {
+        width: 100%; /* Garante que o card estique até o limite do padding */
+        box-sizing: border-box; /* Impede que a borda "vaze" do tamanho */
+    }
+}
