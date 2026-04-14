@@ -362,14 +362,22 @@ width: largura
     }
 }
 
-/* Estilo para os links dos projetos */
+/* =========================================
+   ESTILO DOS LINKS DOS PROJETOS
+   ========================================= */
+
 .link-projeto {
-    text-decoration: none;
-    color: inherit; /* Mantém a cor original do texto */
+    text-decoration: none !important; /* O !important proíbe o navegador de criar a linha azul */
 }
 
+.link-projeto h3 {
+    color: #00d2df; /* Deixa o título com a mesma cor do "O Desafio" */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efeito invertido: como agora é ciano, quando passar o mouse no PC, ele fica branco */
 .link-projeto h3:hover {
-    color: #00d2df; /* Brilho na cor de destaque */
-    transition: 0.3s;
-    cursor: pointer; /* Garante que a "mãozinha" apareça ao passar o mouse */
+    color: #ffffff; 
+    cursor: pointer;
 }
