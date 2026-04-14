@@ -361,3 +361,15 @@ width: largura
         text-align: center;
     }
 }
+
+/* Estilo para os links dos projetos */
+.link-projeto {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.link-projeto h3:hover {
+    color: #00d2df; /* Brilho na cor de destaque */
+    transition: 0.3s;
+    cursor: pointer; /* Garante que a "mãozinha" apareça ao passar o mouse */
+}
