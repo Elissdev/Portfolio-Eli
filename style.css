@@ -363,21 +363,26 @@ width: largura
 }
 
 /* =========================================
-   ESTILO DOS LINKS DOS PROJETOS
+   RESET TOTAL DOS LINKS (DESKTOP E MOBILE)
    ========================================= */
 
+/* 1. Tira o sublinhado da "caixa" do link geral */
 .link-projeto {
-    text-decoration: none !important; /* O !important proíbe o navegador de criar a linha azul */
+    text-decoration: none !important;
 }
 
-.link-projeto h3 {
-    color: #00d2df; /* Deixa o título com a mesma cor do "O Desafio" */
-    text-decoration: none;
+/* 2. Força o ciano no texto em TODOS os estados possíveis */
+.link-projeto h3,
+.link-projeto:link h3,
+.link-projeto:visited h3,
+.link-projeto:active h3,
+.link-projeto:focus h3 {
+    color: #00d2df !important; 
+    text-decoration: none !important;
     transition: color 0.3s ease;
 }
 
-/* Efeito invertido: como agora é ciano, quando passar o mouse no PC, ele fica branco */
-.link-projeto h3:hover {
-    color: #ffffff; 
-    cursor: pointer;
+/* 3. Apenas o Hover (passar o mouse no PC) muda a cor */
+.link-projeto:hover h3 {
+    color: #ffffff !important; 
 }
