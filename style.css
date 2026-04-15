@@ -432,8 +432,8 @@ a.link-projeto:hover h3 {
         line-height: 1.7 !important; 
     }
 
-    .projeto-card p {
-        font-size: 1.05rem !important; 
+   .projeto-card p {
+        font-size: 1rem !important; 
     }
 
     .tech-stack p {
