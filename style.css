@@ -1,3 +1,7 @@
+html {
+    background-color: #1D232E;
+}
+
 body {
     min-height: 100vh; 
     margin: 0;
@@ -11,7 +15,7 @@ body {
     background-attachment: fixed; 
     justify-content: center;
     color: #FFFFFF;
-    font-size: 18px; 
+    font-size: 18px; /* Restaurando o tamanho da sua fonte original */
 }  
     .containerGlobal {
     width: 50%;
