@@ -414,11 +414,10 @@ a.link-projeto:hover h3 {
     .tituloDescricao,
     h2, 
     .tech-stack p {
-        white-space: nowrap !important; /* Proíbe o texto de pular para a linha de baixo */
-        font-size: 1.15rem !important; /* Reduz a fonte levemente para caber exato na tela do iPhone */
-        text-align: center !important;
+        white-space: normal !important; /* Libera o texto para respirar e voltar ao tamanho grande original */
+        text-align: center !important; /* Garante que tudo continue perfeitamente centralizado */
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-    }
+}
 }
