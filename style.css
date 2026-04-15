@@ -1,13 +1,15 @@
-    body {
-    background-image: url(assets/imagem_fundo.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-x: -50px; 
+body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    color: white;
-    font-family: Arial, sans-serif;
+    display: flex;
+    background-image: url('assets/imagem_fundo.jpg');
+    background-size: 110%; /* Dá um zoom de 10% no fundo, afastando a estrela da borda */
+    background-position: center; /* Centraliza a imagem com o zoom */
+    background-repeat: no-repeat;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 16px;
 }
     
     .containerGlobal {
@@ -237,6 +239,7 @@ width: largura
     border-radius: 10px; /* Deixa os cantinhos arredondados */
     padding: 1.5rem; /* Espaço interno para o texto não grudar na borda */
     transition: transform 0.3s ease, border-color 0.3s ease; /* Prepara a animação */
+    border: 1px solid #00d2df !important;
 }
 
 /* Efeito ao passar o mouse por cima (Hover) */
@@ -400,5 +403,17 @@ a.link-projeto:hover h3 {
     .containerDireito div {
         white-space: nowrap !important;
         text-align: center;
+    }
+
+    /* Ajuste para forçar os títulos em uma única linha e centralizados no mobile */
+    .tituloDescricao,
+    h2, 
+    .tech-stack p {
+        white-space: nowrap !important; /* Proíbe o texto de pular para a linha de baixo */
+        font-size: 1.15rem !important; /* Reduz a fonte levemente para caber exato na tela do iPhone */
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
