@@ -28,7 +28,11 @@ body {
     align-items: center;
     margin: 5% 0;
     }
-
+/* Remove o azul e sublinhado padrão forçado por navegadores de aplicativos (ex: LinkedIn) */
+a {
+    text-decoration: none !important; /* Arranca o sublinhado */
+    color: inherit !important; /* Obriga o link a herdar a cor do texto original (branco ou ciano), e não ficar azul */
+}
 
 strong {
     color: aqua;
