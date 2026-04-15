@@ -421,3 +421,22 @@ a.link-projeto:hover h3 {
         margin-right: 0 !important;
 }
 }
+
+/* =========================================
+   3. REFINAMENTO DE TIPOGRAFIA (APENAS DESKTOP)
+   ========================================= */
+@media screen and (min-width: 769px) {
+    
+    .textoDescricao {
+        font-size: 1.15rem !important;
+        line-height: 1.7 !important; 
+    }
+
+    .projeto-card p {
+        font-size: 1.05rem !important; 
+    }
+
+    .tech-stack p {
+        font-size: 1.5rem !important; 
+    }
+}
