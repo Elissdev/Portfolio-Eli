@@ -1,15 +1,14 @@
-body {
-    height: 100%;
+    body {
+    background-image: url(assets/imagem_fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: -50px; 
     margin: 0;
     padding: 0;
-    display: flex;
-    background-image: url(assets/imagem_fundo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-content: center;
-    color: #FFFFFF;
-    font-size: 18px;
-    }
+    color: white;
+    font-family: Arial, sans-serif;
+}
     
     .containerGlobal {
     width: 50%;
@@ -351,47 +350,44 @@ a.link-projeto:hover h3 {
    ========================================= */
 @media screen and (max-width: 768px) {
     
-    /* Previne rolagem horizontal */
     html, body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    /* Organiza containers sem quebrar o desktop */
+    /* Margem fininha de segurança igual aos seus prints antigos */
     .containerGlobal,
     .container {
         width: 100% !important;
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: 1.2rem !important; 
+        padding-right: 1.2rem !important;
         margin: 0 !important;
         box-sizing: border-box;
     }
 
-    /* Estica caixas de texto e remove paddings do desktop */
     .containerGlobal > div {
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 !important;
     }
 
-    /* Restaura os projetos no celular para 1 coluna */
+    /* Remove padding extra para os cards poderem ficar largos */
     .lista-projetos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 1.5rem !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        padding: 0 !important; 
+        margin: 0 !important;
     }
 
+    /* Permite que o card estique e fique largo como no iPhone original */
     .projeto-card {
         width: 100% !important;
-        max-width: 380px !important;
-        margin-bottom: 1.5rem;
+        max-width: 400px !important; 
+        margin-bottom: 1.5rem !important;
         box-sizing: border-box;
     }
 
-    /* Mantém o rodapé e a frase em uma linha */
     .containerDireito {
         width: 100% !important;
         display: flex;
