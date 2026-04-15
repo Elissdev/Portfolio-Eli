@@ -286,6 +286,7 @@ width: largura
     justify-content: center; /* Junta os ícones no meio */
     gap: 2rem; /* Cria um espaço bonito entre os botões, fica mais responsivo que o space-evenly */
 }
+}
 
 /* =========================================
    CAIXA DE FERRAMENTAS (TECH STACK)
@@ -336,14 +337,13 @@ a.link-projeto:active {
 }
 
 a.link-projeto h3 {
-    color: #00d2df !important;
+    color: #00d2df !important; /* Cor Ciano fixada para os links */
     text-decoration: none !important;
     transition: color 0.3s ease;
 }
 
 a.link-projeto:hover h3 {
-    color: #ffffff !important;
-}
+    color: #ffffff !important; /* Efeito hover branco para desktop */
 }
 
 /* =========================================
@@ -351,46 +351,58 @@ a.link-projeto:hover h3 {
    ========================================= */
 @media screen and (max-width: 768px) {
     
-    /* Trava a tela para não ter rolagem pro lado */
+    /* Previne rolagem horizontal */
     html, body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    /* Organiza os containers SEM quebrar o desktop */
-    .containerGlobal, 
+    /* Organiza containers sem quebrar o desktop */
+    .containerGlobal,
     .container {
-        width: 100%;
-        padding: 0 1.5rem;
+        width: 100% !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        margin: 0 !important;
         box-sizing: border-box;
     }
 
-    /* Estica as caixas de texto para respirarem no celular */
-    .containerEsquerdo,
-    .containerDireito {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+    /* Estica caixas de texto e remove paddings do desktop */
+    .containerGlobal > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
     }
 
-    .containerDireito div {
-        white-space: nowrap; /* Mantém o </ Analista... > em uma linha */
-    }
-
-    /* Transforma a grade em uma coluna única e centralizada */
+    /* Restaura os projetos no celular para 1 coluna */
     .lista-projetos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
-        margin: 0;
+        padding: 0 1.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .projeto-card {
-        width: 100%;
-        max-width: 380px; /* Limite elegante para não esticar demais */
+        width: 100% !important;
+        max-width: 380px !important;
         margin-bottom: 1.5rem;
         box-sizing: border-box;
+    }
+
+    /* Mantém o rodapé e a frase em uma linha */
+    .containerDireito {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .containerDireito div {
+        white-space: nowrap !important;
+        text-align: center;
     }
 }
