@@ -245,6 +245,10 @@ width: largura
     padding: 1.5rem; /* Espaço interno para o texto não grudar na borda */
     transition: transform 0.3s ease, border-color 0.3s ease; /* Prepara a animação */
     border: 1px solid #00d2df !important;
+    height: 100% !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Efeito ao passar o mouse por cima (Hover) */
