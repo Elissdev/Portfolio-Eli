@@ -1,17 +1,18 @@
 body {
-    height: 100%;
+    min-height: 100vh; 
     margin: 0;
     padding: 0;
     display: flex;
-    background-image: url('assets/imagem_fundo.jpg');
-    background-size: 110%; /* Dá um zoom de 10% no fundo, afastando a estrela da borda */
-    background-position: center; /* Centraliza a imagem com o zoom */
+    background-color: #1D232E; 
+    background-image: url(assets/imagem_fundo.jpg);
+    background-size: cover; 
+    background-position-x: -50px; 
     background-repeat: no-repeat;
+    background-attachment: fixed; 
     justify-content: center;
     color: #FFFFFF;
-    font-size: 16px;
-}
-    
+    font-size: 18px; 
+}  
     .containerGlobal {
     width: 50%;
     height: 50%;
