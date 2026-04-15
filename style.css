@@ -211,7 +211,7 @@ width: largura
 
 #projetos {
     margin-top: 4rem;
-    margin-bottom: 5rem; /* Essa é a mágica que vai empurrar a sua foto lá para baixo! */
+    margin-bottom: 5rem; /* Essa é a mágica que vai empurrar a foto lá para baixo! */
     width: 100%; /* Garante que a seção ocupe a largura toda na tela */
 }
 
@@ -221,17 +221,17 @@ width: largura
     margin-bottom: 3rem; /* Cria um espaço em branco fundamental entre o título e os projetos */
 }
 
-/* A NOSSA "ESTANTE" (Versão Desktop) */
+/* (Versão Desktop) */
 .lista-projetos {
     display: grid;
-    /* Reduzimos o tamanho mínimo para 250px para caberem os 3 cards novamente! */
+    /* Reduz o tamanho mínimo para 250px para caberem os 3 cards novamente! */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem; 
     margin-top: 2rem;
-    padding: 0 4rem; /* Mantemos o respiro elegante que você pediu */
+    padding: 0 4rem; 
 }
 
-/* OS NOSSOS "LIVROS" (Cards) */
+/* (Cards) */
 .projeto-card {
     background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Uma borda bem sutil */
@@ -256,7 +256,7 @@ width: largura
     padding-bottom: 0.5rem;
 }
 
-/* Textos de Desafio e O que fiz */
+/* Textos de Desafio e o que fiz */
 .projeto-card p {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -266,8 +266,7 @@ width: largura
 
 /* Destacando as palavras em negrito */
 .projeto-card strong {
-    color: #00d2df; /* Mesma cor de destaque que você usa na sua apresentação */
-}
+    color: #00d2df; /* O mesmo tom de verde-água para destacar */
 
 /* =========================================
    AJUSTES DO RODAPÉ / PERFIL INFERIOR
@@ -294,12 +293,12 @@ width: largura
 
 .tech-stack {
     margin-top: 2rem;
-    text-align: left; /* Alinha com o seu texto inicial */
+    text-align: left; /* Alinha com o texto inicial */
 }
 
 .tech-stack p {
     font-size: 0.9rem;
-    color: #00d2df; /* Cor de destaque que você já usa */
+    color: #00d2df; /* Cor de destaque */
     margin-bottom: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -328,14 +327,36 @@ width: largura
 /* =========================================
    AJUSTE DE RESPONSIVIDADE (MOBILE)
    ========================================= */
-
 @media screen and (max-width: 768px) {
     
-    /* 1. CORREÇÃO DOS CARDS (Trocando Grid por Flex para centralização absoluta) */
+    /* 1. Previne bugs de rolagem horizontal na tela */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. Força os containers a usarem toda a tela e remove paddings do desktop */
+    .containerGlobal,
+    .container {
+        width: 100% !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* 3. Libera as caixas de texto para esticarem */
+    .containerGlobal > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 4. Restaura a centralização dos cards no mobile */
     .lista-projetos {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Trava no centro do eixo X */
+        align-items: center; 
         padding: 0 1.5rem; 
         margin-left: 0;
         margin-right: 0;
@@ -343,30 +364,28 @@ width: largura
 
     .projeto-card {
         width: 100%;
-        max-width: 380px; /* Impede o card de esticar demais e mantém elegante no meio */
+        max-width: 380px; 
         box-sizing: border-box;
     }
 
-    /* 2. CORREÇÃO DO RODAPÉ E DA FRASE DE QA */
+    /* 5. Restaura o rodapé e impede a quebra da frase de QA */
     .containerDireito {
-        width: 100%; /* Força a caixa a ocupar a tela toda, tirando o "aperto" */
+        width: 100%; 
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza a foto e o texto */
+        align-items: center; 
         text-align: center;
     }
 
     .containerDireito div {
-        white-space: nowrap; /* A mágica que impede a frase de quebrar no meio! */
+        white-space: nowrap; 
         text-align: center;
     }
-}
+} 
 
 /* =========================================
    RESET TOTAL DOS LINKS (DESKTOP E MOBILE)
    ========================================= */
-
-/* 1. Tira o sublinhado da "caixa" do link geral */
 .link-projeto {
     text-decoration: none !important;
 }
