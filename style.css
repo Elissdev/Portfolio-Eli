@@ -506,3 +506,16 @@ a.link-projeto:hover h3 {
     line-height: 1.6 !important;
     font-weight: normal !important;
 }
+
+/* =========================================
+   AJUSTE DE RESPONSIVIDADE (CELULARES)
+   Garante que os títulos caibam em uma única linha
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .titulo-secao, 
+    h2[style*="color: #00d2df"] {
+        font-size: 1.1rem !important; /* Diminui a fonte levemente apenas no celular */
+        text-align: center !important; /* Força a centralização absoluta */
+        white-space: nowrap !important; /* Proíbe o navegador de quebrar a linha */
+    }
+}
