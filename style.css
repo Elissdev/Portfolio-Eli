@@ -34,6 +34,18 @@ a {
     color: inherit !important; /* Obriga o link a herdar a cor do texto original (branco ou ciano), e não ficar azul */
 }
 
+/* Selo para projetos corporativos privados */
+.tag-privado {
+    display: inline-block;
+    background-color: rgba(0, 210, 223, 0.1);
+    color: #00d2df;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Deixa o selo bem arredondado */
+    font-size: 0.80rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 210, 223, 0.3);
+}
+
 strong {
     color: aqua;
 }
