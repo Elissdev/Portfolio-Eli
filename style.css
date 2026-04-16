@@ -449,3 +449,25 @@ a.link-projeto:hover h3 {
         font-size: 1.25rem !important; 
     }
 }
+
+/* =========================================
+   4. AJUSTE DE RESPONSIVIDADE (TABLETS E IPADS)
+   ========================================= */
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    
+    /* 1. Libera o "estrangulamento" da tela, passando de 50% para 90% de espaço útil */
+    .containerGlobal {
+        width: 90% !important; 
+    }
+    
+    /* 2. Dá espaço total para os textos respirarem e não quebrarem em várias linhas */
+    .containerEsquerdo {
+        width: 100% !important; 
+        text-align: center !important;
+    }
+
+    /* 3. Garante que a descrição fique centralizada no tablet */
+    .textoDescricao {
+        text-align: center !important;
+    }
+}
