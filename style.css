@@ -486,3 +486,23 @@ a.link-projeto:hover h3 {
         text-align: center !important;
     }
 }
+
+/* =========================================
+   PADRONIZAÇÃO FORÇADA DE FONTES NOS CARDS
+   Garante que projetos privados e públicos tenham o mesmo tamanho
+   ========================================= */
+
+/* Padroniza os Títulos (h3) */
+.projeto-card h3, 
+.projeto-card a h3 {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+/* Padroniza os Textos de Desafio e O que fiz (p) */
+.projeto-card p, 
+.projeto-card a p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    font-weight: normal !important;
+}
