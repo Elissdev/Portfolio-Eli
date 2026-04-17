@@ -521,3 +521,31 @@ a.link-projeto:hover h3 {
         padding: 0 15px !important; /* Dá uma margem de segurança para o texto não encostar no vidro do celular */
     }
 }
+
+/* =========================================
+   MELHORIA UX: CAIXA DE FERRAMENTAS
+   Alinha ícones com textos explicativos abaixo
+   ========================================= */
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os ícones pulem de linha se a tela for pequena */
+    gap: 1.5rem; /* Espaço entre as ferramentas */
+    margin-top: 1.5rem;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column; /* Força o ícone a ficar em cima do texto */
+    align-items: center; /* Centraliza tudo perfeitamente */
+    gap: 0.5rem; /* Respiro entre a imagem e a letra */
+}
+
+.icon-box i {
+    font-size: 2.5rem; /* Tamanho do ícone */
+}
+
+.icon-box span {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    font-weight: normal;
+}
