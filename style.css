@@ -523,29 +523,50 @@ a.link-projeto:hover h3 {
 }
 
 /* =========================================
-   MELHORIA UX: CAIXA DE FERRAMENTAS
-   Alinha ícones com textos explicativos abaixo
+   CORREÇÃO DEFINITIVA: FORÇA A BIO PARA O TOPO
+   Quebra a linha e empilha os containers
    ========================================= */
+
+.containerGlobal {
+    display: flex !important;
+    flex-direction: column !important; /* A MÁGICA: Força tudo a ficar um embaixo do outro */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.containerEsquerdo {
+    width: 100% !important;
+    max-width: 900px !important; /* Limita a largura para o texto não esticar de ponta a ponta na tela */
+    margin-bottom: 4rem !important; /* Dá um respiro gigante antes de começar os projetos */
+    border: none !important; /* Arranca fora qualquer linha branca lateral que sobrou */
+}
+
+/* Devolve a liberdade e o tamanho para os seus ícones brilharem no topo */
 .tech-icons {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os ícones pulem de linha se a tela for pequena */
-    gap: 1.5rem; /* Espaço entre as ferramentas */
-    margin-top: 1.5rem;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    width: 100% !important;
+    margin-top: 2.5rem !important;
 }
 
 .icon-box {
-    display: flex;
-    flex-direction: column; /* Força o ícone a ficar em cima do texto */
-    align-items: center; /* Centraliza tudo perfeitamente */
-    gap: 0.5rem; /* Respiro entre a imagem e a letra */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 90px !important;
+    gap: 0.5rem !important;
 }
 
-.icon-box i {
-    font-size: 2.5rem; /* Tamanho do ícone */
+.icon-box i, 
+.icon-box .fallback-icon {
+    font-size: 2.8rem !important; /* Ícones grandes novamente */
+    line-height: 1 !important;
 }
 
 .icon-box span {
-    font-size: 0.85rem;
-    color: #e0e0e0;
-    font-weight: normal;
+    font-size: 0.85rem !important;
+    color: #e0e0e0 !important;
+    text-align: center !important;
 }
