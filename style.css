@@ -16,20 +16,22 @@ html {
 }
 
 body {
-    min-height: 100vh; 
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #1D232E; 
-    background-image: url(assets/imagem_fundo.jpg);
-    background-size: cover; 
-    background-position-x: -50px; 
+    background-color: #1D232E;
+    background-image: url('assets/imagem_fundo.jpg');
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem perfeitamente nos dois eixos */
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
+    overflow-x: hidden; /* Tesoura mágica: corta qualquer coisa que tente vazar pelas laterais */
     justify-content: center;
     color: #FFFFFF;
-    font-size: 18px; 
-}  
+    font-size: 18px;
+}
+
     .containerGlobal {
     width: 50%;
     height: 50%;
