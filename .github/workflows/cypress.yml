@@ -11,9 +11,27 @@ jobs:
       - name: Rodar os testes do Cypress
         uses: cypress-io/github-action@v6
 
+      - name: Gerar Relatório em PDF
+        if: always()
+        run: |
+          npm install puppeteer
+          DATA=$(date +%Y-%m-%d)
+          ARQUIVO="cypress/reports/${DATA}-portfolio-eli.pdf"
+          node -e "
+            const puppeteer = require('puppeteer');
+            (async () => {
+              const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+              const page = await browser.newPage();
+              await page.goto('file://' + process.cwd() + '/cypress/reports/mochawesome.html', { waitUntil: 'networkidle2' });
+              await page.pdf({ path: '${ARQUIVO}', format: 'A4', printBackground: true });
+              await browser.close();
+            })();
+          "
+
+      # Salva a pasta inteira no cofre (HTML + PDF)
       - name: Salvar Relatório de Testes
-        if: always() # Garante que o upload seja feito mesmo se os testes falharem
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: relatorio-de-testes
-          path: cypress/reports 
+          path: cypress/reports
