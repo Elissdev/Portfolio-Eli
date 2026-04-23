@@ -17,6 +17,7 @@ html {
     background-color: #1D232E;
 }
 
+/* No seu style.css */
 body {
     min-height: 100vh;
     margin: 0;
@@ -24,10 +25,11 @@ body {
     display: flex;
     background-color: #1D232E;
     background-image: url('assets/imagem_fundo.jpg');
-    background-size: cover; /* Faz a imagem esticar e mata o buraco na direita */
-    background-position: left top; /* Trava a imagem na esquerda para as estrelas nunca serem cortadas */
+    background-size: cover; /* Garante que cubra a tela toda */
+    background-position: left top; /* Trava a esquerda (estrelas) para nunca cortar */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
     justify-content: center;
     color: #FFFFFF;
     font-size: 18px;
