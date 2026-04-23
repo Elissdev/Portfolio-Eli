@@ -1,4 +1,6 @@
-* {
+@import "tailwindcss";*
+
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,16 +24,14 @@ body {
     display: flex;
     background-color: #1D232E;
     background-image: url('assets/imagem_fundo.jpg');
-    background-size: cover;
-    background-position: center; /* Centraliza a imagem perfeitamente nos dois eixos */
+    background-size: cover; /* Faz a imagem esticar e mata o buraco na direita */
+    background-position: left top; /* Trava a imagem na esquerda para as estrelas nunca serem cortadas */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow-x: hidden; /* Tesoura mágica: corta qualquer coisa que tente vazar pelas laterais */
     justify-content: center;
     color: #FFFFFF;
     font-size: 18px;
 }
-
     .containerGlobal {
     width: 50%;
     height: 50%;
