@@ -1,1 +1,1 @@
-# Portfolio-Eli
+[![Cypress UI Tests](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml/badge.svg)](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml)
