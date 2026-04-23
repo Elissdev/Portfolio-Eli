@@ -1,0 +1,19 @@
+name: Cypress UI Tests
+
+# Avisa o GitHub para rodar isso toda vez que você der um push
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Rodar os testes do Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          # Se o seu site precisa de um servidor local para rodar, 
+          # o comando abaixo inicia ele antes do teste
+          # start: npx serve .
+          wait-on: 'http://localhost:3000' # Opcional, ajuste conforme a porta
