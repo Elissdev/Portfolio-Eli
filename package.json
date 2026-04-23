@@ -2,6 +2,9 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.4",
     "cypress": "^15.14.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2",
     "tailwindcss": "^4.2.4"
   },
   "name": "portfolio-eli",

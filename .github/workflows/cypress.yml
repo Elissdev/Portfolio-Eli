@@ -1,14 +1,19 @@
 name: Cypress UI Tests
-
-# Avisa o GitHub para rodar isso toda vez que você der um push
 on: [push]
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar o código do repositório
+      - name: Baixar o código
         uses: actions/checkout@v4
 
       - name: Rodar os testes do Cypress
         uses: cypress-io/github-action@v6
+
+      - name: Salvar Relatório de Testes
+        if: always() # Garante que o upload seja feito mesmo se os testes falharem
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-de-testes
+          path: cypress/reports 
