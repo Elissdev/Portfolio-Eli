@@ -12,8 +12,3 @@ jobs:
 
       - name: Rodar os testes do Cypress
         uses: cypress-io/github-action@v6
-        with:
-          # Se o seu site precisa de um servidor local para rodar, 
-          # o comando abaixo inicia ele antes do teste
-          # start: npx serve .
-          wait-on: 'http://localhost:3000' # Opcional, ajuste conforme a porta
