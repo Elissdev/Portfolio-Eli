@@ -17,7 +17,6 @@ html {
     background-color: #1D232E;
 }
 
-/* No seu style.css */
 body {
     min-height: 100vh;
     margin: 0;
@@ -25,8 +24,8 @@ body {
     display: flex;
     background-color: #1D232E;
     background-image: url('assets/imagem_fundo.jpg');
-    background-size: cover; /* Garante que cubra a tela toda */
-    background-position: left top; /* Trava a esquerda (estrelas) para nunca cortar */
+    background-size: cover; 
+    background-position: left top; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
@@ -51,7 +50,6 @@ a {
     color: inherit !important;
 }
 
-/* Selo para projetos corporativos privados (Posicionado no rodapé) */
 .tag-privado {
     display: inline-block;
     background-color: rgba(0, 210, 223, 0.1);
@@ -68,18 +66,11 @@ strong {
     color: aqua;
 }
 
-/*
-p {
-    text-align: center;
-}
-*/
-
 .containerEsquerdo {
     width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 2px solid #EB00FF; */
 }
 
 .containerEsquerdo .tituloDescricao {
@@ -138,11 +129,6 @@ img {
     width: 207px;
 }
 
-
-/*  
-Dentro desse contexto/bolha de código, está todo o CSS para telas de até 375px 
-width: largura
-*/
 @media screen and (max-width: 375px){
      .containerGlobal{
         width: 100%;
@@ -245,10 +231,6 @@ width: largura
         
     }
 
-    /* =========================================
-   SEÇÃO DE PROJETOS (QA Portfolio)
-   ========================================= */
-
 #projetos {
     margin-top: 4rem;
     margin-bottom: 5rem; 
@@ -290,7 +272,6 @@ width: largura
     border-color: #00d2df; 
 }
 
-/* Título de cada projeto */
 .projeto-card h3 {
     color: #ffffff;
     font-size: 1.25rem;
@@ -300,7 +281,6 @@ width: largura
     padding-bottom: 0.5rem;
 }
 
-/* Textos de Desafio e o que fiz */
 .projeto-card p {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -308,42 +288,31 @@ width: largura
     margin-bottom: 0.8rem;
 }
 
-/* Destacando as palavras em negrito */
 .projeto-card strong {
-    color: #00d2df; /* O mesmo tom de verde-água para destacar */
+    color: #00d2df; 
 
-/* =========================================
-   AJUSTES DO RODAPÉ / PERFIL INFERIOR
-   ========================================= */
-
-/* Centraliza a imagem, os textos e os contatos que estão abaixo dos projetos */
 .fotoPerfil {
     display: block;
-    margin: 0 auto; /* Centraliza a imagem na tela */
+    margin: 0 auto; 
 }
 
-/* O contêiner dos botõezinhos (LinkedIn, GitHub) */
 .containerContatos {
     margin-top: 1.5rem;
     width: 100%;
     display: flex;
-    justify-content: center; /* Junta os ícones no meio */
-    gap: 2rem; /* Cria um espaço bonito entre os botões, fica mais responsivo que o space-evenly */
+    justify-content: center; 
+    gap: 2rem; 
 }
 }
-
-/* =========================================
-   CAIXA DE FERRAMENTAS (TECH STACK)
-   ========================================= */
 
 .tech-stack {
     margin-top: 2rem;
-    text-align: left; /* Alinha com o texto inicial */
+    text-align: left; 
 }
 
 .tech-stack p {
     font-size: 0.9rem;
-    color: #00d2df; /* Cor de destaque */
+    color: #00d2df; 
     margin-bottom: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -352,12 +321,11 @@ width: largura
 
 .tech-icons {
     display: flex;
-    flex-wrap: wrap; /* Para os ícones pularem de linha se não couberem */
+    flex-wrap: wrap; 
     gap: 20px;
-    font-size: 40px; /* Tamanho dos ícones */
+    font-size: 40px; 
 }
 
-/* Efeito para os ícones ficarem mais discretos e brilharem no mouse */
 .tech-icons i {
     opacity: 0.7;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -366,12 +334,9 @@ width: largura
 
 .tech-icons i:hover {
     opacity: 1;
-    transform: scale(1.2); /* Dá um zoom no ícone ao passar o mouse */
+    transform: scale(1.2); 
 }
 
-/* =========================================
-   1. ESTILO DEFINITIVO DOS LINKS (GLOBAL)
-   ========================================= */
 a.link-projeto,
 a.link-projeto:link,
 a.link-projeto:visited,
@@ -381,18 +346,15 @@ a.link-projeto:active {
 }
 
 a.link-projeto h3 {
-    color: #00d2df !important; /* Cor Ciano fixada para os links */
+    color: #00d2df !important; 
     text-decoration: none !important;
     transition: color 0.3s ease;
 }
 
 a.link-projeto:hover h3 {
-    color: #ffffff !important; /* Efeito hover branco para desktop */
+    color: #ffffff !important; 
 }
 
-/* =========================================
-   2. AJUSTE DE RESPONSIVIDADE (MOBILE STRICTO)
-   ========================================= */
 @media screen and (max-width: 768px) {
     
     html, body {
@@ -400,7 +362,6 @@ a.link-projeto:hover h3 {
         width: 100%;
     }
 
-    /* Margem fininha de segurança igual aos seus prints antigos */
     .containerGlobal,
     .container {
         width: 100% !important;
@@ -416,7 +377,6 @@ a.link-projeto:hover h3 {
         padding: 0 !important;
     }
 
-    /* Remove padding extra para os cards poderem ficar largos */
     .lista-projetos {
         display: flex;
         flex-direction: column;
@@ -425,7 +385,6 @@ a.link-projeto:hover h3 {
         margin: 0 !important;
     }
 
-    /* Permite que o card estique e fique largo como no iPhone original */
     .projeto-card {
         width: 100% !important;
         max-width: 400px !important; 
@@ -447,21 +406,17 @@ a.link-projeto:hover h3 {
         text-align: center;
     }
 
-    /* Ajuste para forçar os títulos em uma única linha e centralizados no mobile */
     .tituloDescricao,
     h2, 
     .tech-stack p {
-        white-space: normal !important; /* Libera o texto para respirar e voltar ao tamanho grande original */
-        text-align: center !important; /* Garante que tudo continue perfeitamente centralizado */
+        white-space: normal !important; 
+        text-align: center !important; 
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
 }
 }
 
-/* =========================================
-   3. REFINAMENTO DE TIPOGRAFIA (APENAS DESKTOP)
-   ========================================= */
 @media screen and (min-width: 769px) {
     
     .textoDescricao {
@@ -478,41 +433,28 @@ a.link-projeto:hover h3 {
     }
 }
 
-/* =========================================
-   4. AJUSTE DE RESPONSIVIDADE (TABLETS E IPADS)
-   ========================================= */
 @media screen and (min-width: 769px) and (max-width: 1100px) {
     
-    /* 1. Libera o "estrangulamento" da tela, passando de 50% para 90% de espaço útil */
     .containerGlobal {
         width: 90% !important; 
     }
     
-    /* 2. Dá espaço total para os textos respirarem e não quebrarem em várias linhas */
     .containerEsquerdo {
         width: 100% !important; 
         text-align: center !important;
     }
 
-    /* 3. Garante que a descrição fique centralizada no tablet */
     .textoDescricao {
         text-align: center !important;
     }
 }
 
-/* =========================================
-   PADRONIZAÇÃO FORÇADA DE FONTES NOS CARDS
-   Garante que projetos privados e públicos tenham o mesmo tamanho
-   ========================================= */
-
-/* Padroniza os Títulos (h3) */
 .projeto-card h3, 
 .projeto-card a h3 {
     font-size: 1.25rem !important;
     font-weight: bold !important;
 }
 
-/* Padroniza os Textos de Desafio e O que fiz (p) */
 .projeto-card p, 
 .projeto-card a p {
     font-size: 0.95rem !important;
@@ -520,10 +462,6 @@ a.link-projeto:hover h3 {
     font-weight: normal !important;
 }
 
-/* =========================================
-   AJUSTE DE RESPONSIVIDADE (CELULARES)
-   Títulos com tamanho legível, centralizados e com quebra suave
-   ========================================= */
 @media screen and (max-width: 768px) {
     .titulo-secao, 
     h2[style*="color: #00d2df"] {
@@ -534,11 +472,6 @@ a.link-projeto:hover h3 {
         padding: 0 15px !important; 
     }
 }
-
-/* =========================================
-   CORREÇÃO DEFINITIVA: FORÇA A BIO PARA O TOPO
-   Quebra a linha e empilha os containers
-   ========================================= */
 
 .containerGlobal {
     display: flex !important;
