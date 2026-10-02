@@ -2,7 +2,7 @@
 
 [![Cypress UI Tests](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml/badge.svg)](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml)
 
-Sou a Elissandra (Eli), Analista de Testes e QA. Trabalho com testes manuais e automação e uso este repositório também como laboratório de qualidade.
+Sou a Elissandra (Eli), Analista de Testes e QA Júnior. Trabalho com testes manuais e automação e uso este repositório também como laboratório de qualidade.
 
 Este repositório contém o código-fonte do meu portfólio pessoal e, mais importante, a **suíte de testes automatizados** e a **esteira de CI/CD** que estruturam e validam a qualidade deste projeto em tempo real.
 
