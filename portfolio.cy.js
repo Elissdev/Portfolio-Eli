@@ -4,7 +4,7 @@ describe('Testes de Sanidade do Portfólio', () => {
     cy.visit('/')
 
     // 2. Hero: título, subtítulo e botões principais
-    cy.contains('Eli — Analista de Testes | QA').should('be.visible')
+    cy.contains('Eli, Analista de Testes | QA').should('be.visible')
     cy.contains('Testes manuais, automação e qualidade de software.').should('be.visible')
     cy.get('a[href="#projetos"]').contains('Conheça meus projetos').should('be.visible')
 
