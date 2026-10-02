@@ -1,8 +1,8 @@
-# Portfólio de Engenharia de Qualidade | Elissandra Silva
+# Portfólio de QA | Elissandra Silva (Eli)
 
 [![Cypress UI Tests](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml/badge.svg)](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml)
 
-Sou a Elissandra, Analista de QA focada em construir uma cultura de qualidade sólida. 
+Sou a Elissandra (Eli), Analista de Testes e QA. Trabalho com testes manuais e automação e uso este repositório também como laboratório de qualidade.
 
 Este repositório contém o código-fonte do meu portfólio pessoal e, mais importante, a **suíte de testes automatizados** e a **esteira de CI/CD** que estruturam e validam a qualidade deste projeto em tempo real.
 
@@ -13,8 +13,8 @@ Este repositório contém o código-fonte do meu portfólio pessoal e, mais impo
 * **Integração Contínua (CI):** GitHub Actions
 
 ## Arquitetura do Processo de Qualidade
-Para garantir que a minha vitrine profissional esteja sempre funcionando perfeitamente, implementei uma esteira de automação que roda a cada atualização de código:
-1.  **Sanity Check Automatizado:** O Cypress acessa o ambiente de produção e valida os elementos visuais críticos e o redirecionamento correto de todos os links de contato e projetos.
+Para manter esta vitrine funcionando e dar visibilidade à qualidade do projeto, implementei uma esteira de automação que roda a cada atualização de código:
+1.  **Sanity Check Automatizado:** O Cypress acessa o ambiente de produção e valida elementos visuais críticos e os links de contato e projetos.
 2.  **Integração Contínua:** O GitHub Actions orquestra a execução na nuvem.
 3.  **Geração de Evidências:** A esteira gera automaticamente um relatório visual via Mochawesome, converte para PDF utilizando o Puppeteer e anexa o artefato final com a data da execução diretamente na aba Actions.
 
