@@ -14,7 +14,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal e, mais impo
 
 ## Arquitetura do Processo de Qualidade
 Para manter esta vitrine funcionando e dar visibilidade à qualidade do projeto, implementei uma esteira de automação que roda a cada atualização de código:
-1.  **Sanity Check Automatizado:** O Cypress acessa o ambiente de produção e valida elementos visuais críticos e os links de contato e projetos.
+1.  **Sanity Check Automatizado:** O Cypress sobe o site localmente e valida elementos visuais críticos e os links de contato e projetos a cada push.
 2.  **Integração Contínua:** O GitHub Actions orquestra a execução na nuvem.
 3.  **Geração de Evidências:** A esteira gera automaticamente um relatório visual via Mochawesome, converte para PDF utilizando o Puppeteer e anexa o artefato final com a data da execução diretamente na aba Actions.
 

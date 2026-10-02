@@ -10,6 +10,12 @@ jobs:
 
       - name: Rodar os testes do Cypress
         uses: cypress-io/github-action@v6
+        with:
+          start: python3 -m http.server 4173
+          wait-on: 'http://localhost:4173'
+          wait-on-timeout: 60
+        env:
+          CYPRESS_BASE_URL: http://localhost:4173/
 
       - name: Gerar Relatório em PDF
         if: always()
