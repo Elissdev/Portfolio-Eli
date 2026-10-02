@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl: 'https://elissandra.codamos.com.br/',
     reporter: 'mochawesome',
     reporterOptions: {
       reportDir: 'cypress/reports',

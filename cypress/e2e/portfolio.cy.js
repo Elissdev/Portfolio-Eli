@@ -1,27 +1,39 @@
 describe('Testes de Sanidade do Portfólio', () => {
-  it('Deve carregar a página e validar as seções vitais e links de contato', () => {
+  it('Deve carregar a página e validar as seções principais', () => {
     // 1. Acessa o ambiente de produção
-    cy.visit('https://elissandra.codamos.com.br/')
+    cy.visit('/')
 
-    // 2. Valida a Seção da Bio
-    cy.contains('cultura de qualidade').should('be.visible')
+    // 2. Hero: título, subtítulo e botões principais
+    cy.contains('Eli, Analista de Testes | QA').should('be.visible')
+    cy.contains('Testes manuais, automação e qualidade de software.').should('be.visible')
+    cy.get('a[href="#projetos"]').contains('Conheça meus projetos').should('be.visible')
 
-    // 3. Valida a Seção Corporativa
-    cy.contains('Projeto Corporativo Privado').should('exist')
+    // 3. Seção Sobre mim
+    cy.contains('Sobre mim').should('be.visible')
 
-    // 4. Valida a Seção de Laboratório e Projetos Pessoais
-    // Verifica se o título da seção apareceu
-    cy.contains('Laboratório e Projetos Pessoais').should('be.visible')
-    // Pega uma amostra de um dos cards para garantir que a grid renderizou
+    // 4. Seção Tecnologias e ferramentas
+    cy.contains('Tecnologias e ferramentas').should('be.visible')
+    cy.contains('Testes exploratórios').should('be.visible')
+
+    // 5. Experiência prática em QA (projetos corporativos)
+    cy.contains('Experiência prática em QA').should('be.visible')
+    cy.contains('Projeto corporativo privado').should('exist')
+
+    // 6. Projetos e laboratório de QA
+    cy.contains('Projetos e laboratório de QA').should('be.visible')
     cy.contains('Calculadora de Descontos').should('be.visible')
 
-    // 5. Valida os Links do Rodapé (Redes Sociais e E-mail)
-    // O comando cy.get() busca o botão pelo destino exato do link
+    // 7. Como eu trabalho / Atualmente estudando
+    cy.contains('Como eu trabalho').should('be.visible')
+    cy.contains('Atualmente estudando').should('be.visible')
+
+    // 8. Contato: links de redes sociais e e-mail
+    cy.contains('Vamos conversar?').should('be.visible')
     cy.get('a[href="https://www.linkedin.com/in/elissandra-silva-750b9b108/"]').should('exist')
-    
-    // Validando especificamente o seu repositório oficial e atual
     cy.get('a[href="https://github.com/Elissdev"]').should('exist')
-    
     cy.get('a[href="mailto:elissandra.dev@gmail.com"]').should('exist')
+
+    // 9. Rodapé
+    cy.contains('© 2026 Elissandra Silva').should('be.visible')
   })
 })

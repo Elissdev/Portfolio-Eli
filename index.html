@@ -1,209 +1,363 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="assets/estrela.png" type="image/png">
-    <title>Elissandra Silva | QA Engineer</title>
+    <title>Elissandra Silva | Analista de Testes e QA Júnior</title>
+    <meta name="description"
+        content="Portfólio de Elissandra Silva (Eli), Analista de Testes e QA Júnior. Testes manuais, automação com Cypress, documentação de qualidade e projetos práticos.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1D232E">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body class="text-white font-serif">
 
     <div class="containerGlobal">
 
-        <div class="containerEsquerdo w-full max-w-3xl mx-auto flex flex-col items-center px-4 mt-8 md:mt-12">
+        <!-- 1. HERO -->
+        <header class="hero" id="inicio">
+            <p class="hero-eyebrow">Portfólio de QA</p>
 
-            <h1 class="tituloDescricao text-3xl md:text-4xl font-bold text-center">
-                Elevando a qualidade do software,<br> 
-                <strong style="color: #00d2df;">um teste de cada vez.</strong>
-            </h1>
+            <h1 class="hero-titulo">Eli, Analista de Testes | QA Júnior</h1>
 
-            <img src="assets/forma_destaque_texto.png" alt="Destaque de texto" class="mt-6 mb-6">
+            <img src="assets/forma_destaque_texto.png" alt="" aria-hidden="true" class="hero-divisor">
 
-            <p class="text-base md:text-lg leading-relaxed text-center">
-                Olá! Sou a Eli, Analista de QA e apaixonada por engenharia de software. Meu trabalho diário vai muito além de caçar bugs, eu foco na construção e evolução de uma <strong>cultura de qualidade</strong>. Atuo na estruturação de processos ágeis, na criação de testes automatizados e na implementação de integração contínua para prevenir regressões. Acredito que a qualidade não é uma etapa final, mas sim o alicerce de qualquer sistema confiável. Quer conhecer mais sobre meu trabalho e projetos? Explore meu portfólio e vamos conversar sobre como posso contribuir para elevar a qualidade do seu software!
+            <p class="hero-subtitulo">Testes manuais, automação e qualidade de software.</p>
+
+            <p class="hero-texto">
+                Sou Analista de Testes e QA Júnior, com experiência prática em testes manuais, automação de testes e documentação
+                de qualidade. Atualmente, também estudo desenvolvimento de software e venho aprofundando meus
+                conhecimentos em automação, JavaScript, SQL, Git e CI/CD.
             </p>
 
-        </div>
+            <nav class="hero-botoes" aria-label="Ações principais">
+                <a class="btn btn-primario" href="#projetos">Conheça meus projetos</a>
+                <a class="btn btn-secundario" href="https://github.com/Elissdev" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-secundario" href="https://www.linkedin.com/in/elissandra-silva-750b9b108/"
+                    target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </nav>
+        </header>
 
-        <div class="tech-icons">
-            
-            <div class="icon-box">
-                <img src="https://cdn.simpleicons.org/cypress/white" alt="Cypress" style="width: 45px; height: 45px; margin-bottom: 8px;">
-                <span>Cypress</span>
+        <!-- 2. SOBRE MIM -->
+        <section class="secao" id="sobre">
+            <h2 class="titulo-secao">Sobre mim</h2>
+
+            <div class="texto-corrido">
+                <p>
+                    Sou a Eli, Analista de Testes e QA Júnior, estudante de Ciência e Tecnologia e apaixonada por entender
+                    como os sistemas funcionam e principalmente como eles podem falhar.
+                </p>
+                <p>
+                    Minha experiência envolve testes manuais, criação e execução de casos de teste, testes
+                    exploratórios, identificação e documentação de defeitos, testes de regressão e automação de
+                    cenários com Cypress.
+                </p>
+                <p>
+                    Também venho desenvolvendo meus conhecimentos em JavaScript, PHP, SQL, Git/GitHub, Linux, Docker e
+                    CI/CD por meio de projetos práticos e experiências profissionais.
+                </p>
+                <p>
+                    Neste portfólio, compartilho parte desse processo através de projetos, experimentos, automações e
+                    estudos voltados para qualidade de software.
+                </p>
             </div>
-            
-            <div class="icon-box">
-                <svg style="width: 45px; height: 45px; margin-bottom: 8px;" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 3h6"></path>
-                    <path d="M10 3v7l-5 10h14l-5-10V3"></path>
-                    <path d="M5.5 18h13"></path>
-                </svg>
-                <span>PHPUnit</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-docker-plain colored"></i>
-                <span>Docker</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-php-plain colored"></i>
-                <span>PHP</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-githubactions-plain colored"></i>
-                <span>GitHub Actions</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-linux-plain colored"></i>
-                <span>Pop!_OS / Linux</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-javascript-plain colored"></i>
-                <span>JavaScript</span>
-            </div>
-            
-            <div class="icon-box">
-                <i class="devicon-bash-plain colored"></i> 
-                <span>Pi.dev</span>
-            </div>
-            
-        </div>
-
-        <section id="projetos" class="w-full flex flex-col items-center mt-10 md:mt-16">
-            
-            <h2 class="titulo-secao text-2xl md:text-3xl font-bold text-center mb-8">
-                Experiência Corporativa
-            </h2>
-
-            <div class="lista-projetos">
-                
-                <article class="projeto-card">
-                    <h3>Documentação Técnica e Fluxos (POPs)</h3>
-                    <p><strong>O Desafio:</strong> Padronizar as rotinas de teste e garantir que a evolução da qualidade do sistema fosse transparente e rastreável.</p>
-                    <p><strong>O que fiz:</strong> Elaborei Procedimentos Operacionais Padrão (POPs) e construí fluxogramas técnicos detalhados para guiar as etapas de desenvolvimento e a geração de relatórios de qualidade.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-                <article class="projeto-card">
-                    <h3>Automação E2E e Relatórios Visuais</h3>
-                    <p><strong>O Desafio:</strong> Automatizar a validação de fluxos de pagamento em sistemas web e gerar evidências claras para a equipe.</p>
-                    <p><strong>O que fiz:</strong> Desenvolvi suítes de testes com Cypress e criei scripts para gerar relatórios automatizados em PDF, utilizando Mochawesome e Puppeteer.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-                <article class="projeto-card">
-                    <h3>Integração Contínua (CI) com GitHub Actions</h3>
-                    <p><strong>O Desafio:</strong> Prevenir que códigos com falhas fossem integrados ao sistema principal durante as revisões da equipe.</p>
-                    <p><strong>O que fiz:</strong> Configurei uma esteira de CI no GitHub Actions que executa automaticamente a suíte de testes do PHPUnit a cada novo Pull Request.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-                <article class="projeto-card">
-                    <h3>Orquestração de Ambientes com Docker</h3>
-                    <p><strong>O Desafio:</strong> Padronizar o ambiente de testes para evitar o famoso problema de "na minha máquina funciona".</p>
-                    <p><strong>O que fiz:</strong> Estruturei ambientes conteinerizados usando Docker e Docker Compose, isolando as ferramentas de automação e o banco de dados.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-                <article class="projeto-card">
-                    <h3>Testabilidade de Código com Mocks</h3>
-                    <p><strong>O Desafio:</strong> Testar regras de negócio complexas de forma rápida, sem depender de bancos de dados ou serviços externos.</p>
-                    <p><strong>O que fiz:</strong> Apliquei o uso de dublês de testes (Mocks) utilizando a biblioteca Prophecy para o PHP, garantindo um isolamento perfeito nos testes unitários.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-                <article class="projeto-card">
-                    <h3>Análise de Vulnerabilidades (OWASP)</h3>
-                    <p><strong>O Desafio:</strong> Identificar brechas de segurança e apoiar a conformidade das aplicações internas.</p>
-                    <p><strong>O que fiz:</strong> Realizei varreduras de segurança e documentei relatórios técnicos focados na prevenção de regressões utilizando o OWASP ZAP.</p>
-                    <span class="tag-privado">🔒 Projeto Corporativo Privado</span>
-                </article>
-
-            </div> <div class="w-full text-center mt-16 md:mt-24 mb-10">
-                <h2 class="titulo-secao text-2xl md:text-3xl font-bold" style="color: #00d2df;">
-                    Laboratório e Projetos Pessoais
-                </h2>
-            </div>
-
-            <div class="lista-projetos">
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/projeto-phpunit" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>Laboratório de Testes Unitários (PHPUnit)</h3>
-                        <p><strong>O Desafio:</strong> Aprofundar o domínio na validação de código a nível de unidade em aplicações PHP de forma independente.</p>
-                        <p><strong>O que fiz:</strong> Desenvolvi um projeto pessoal focado na criação de casos de teste estruturados, utilizando asserções avançadas para garantir a qualidade do código.</p>
-                    </a>
-                </article>
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/estudos-docker-qa" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>Ambientes Isolados (Docker QA)</h3>
-                        <p><strong>O Desafio:</strong> Criar e gerenciar ambientes de testes que fossem totalmente portáteis e replicáveis, simulando cenários reais.</p>
-                        <p><strong>O que fiz:</strong> Configurei imagens e volumes personalizados com Docker, com foco em subir infraestruturas de teste e bancos de dados em questão de segundos.</p>
-                    </a>
-                </article>
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/simulador-de-negocia-o-completo-com-BDD-e-Docker" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>Simulador de Negociação (BDD + Docker)</h3>
-                        <p><strong>O Desafio:</strong> Unir testes guiados por comportamento (BDD) com uma infraestrutura isolada para um simulador complexo.</p>
-                        <p><strong>O que fiz:</strong> Estruturei cenários de teste em linguagem natural (Gherkin) para garantir que as regras de negócio fossem validadas automaticamente dentro de um ambiente Dockerizado.</p>
-                    </a>
-                </article>
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/desconto-qa-lab" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>Lab de Testes: Calculadora de Descontos</h3>
-                        <p><strong>O Desafio:</strong> Validar regras de negócio complexas de precificação, garantindo que descontos unitários e compostos funcionem sem erros.</p>
-                        <p><strong>O que fiz:</strong> Desenvolvi uma suíte completa de Testes Unitários e de Integração em PHP, cobrindo desde a lógica matemática isolada até a comunicação entre componentes do sistema.</p>
-                    </a>
-                </article>
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/cypress-automation-practice-form" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>Automação E2E: Fluxo de Registro</h3>
-                        <p><strong>O Desafio:</strong> Garantir a integridade do processo de cadastro de usuários, um dos fluxos mais críticos de qualquer aplicação.</p>
-                        <p><strong>O que fiz:</strong> Desenvolvi scripts de automação utilizando Cypress e JavaScript para validar inputs, máscaras e retornos de API no fluxo de registro.</p>
-                    </a>
-                </article>
-
-                <article class="projeto-card">
-                    <a href="https://github.com/Elissdev/Testes-do-Firefly" target="_blank" rel="noopener noreferrer" class="link-projeto">
-                        <h3>QA Full Cycle: Projeto Firefly</h3>
-                        <p><strong>O Desafio:</strong> Realizar uma auditoria completa de qualidade em um sistema, cobrindo desde falhas visuais até comportamentos lógicos complexos.</p>
-                        <p><strong>O que fiz:</strong> Executei testes manuais exploratórios, realizei a abertura e gestão de Issues (bugs) detalhadas e desenvolvi scripts automatizados para garantir a estabilidade das funcionalidades críticas.</p>
-                    </a>
-                </article>
-
-            </div>
-
         </section>
 
-        <div class="flex flex-col items-center justify-center mt-16 mb-10 w-full text-center">
+        <!-- 3. TECNOLOGIAS E FERRAMENTAS -->
+        <section class="secao" id="tecnologias">
+            <h2 class="titulo-secao">Tecnologias e ferramentas</h2>
 
-            <div class="containerImagens flex justify-center mb-4">
-                <img class="fotoPerfil" src="assets/imagem_foto_perfil.png" alt="Foto de perfil da Eli">
+            <div class="tech-categorias">
+                <article class="tech-categoria">
+                    <h3>Testes</h3>
+                    <ul class="tech-chips">
+                        <li>Cypress</li>
+                        <li>PHPUnit</li>
+                        <li>Testes manuais</li>
+                        <li>Testes exploratórios</li>
+                        <li>Testes de regressão</li>
+                        <li>BDD / Gherkin</li>
+                    </ul>
+                </article>
+
+                <article class="tech-categoria">
+                    <h3>Programação</h3>
+                    <ul class="tech-chips">
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="tech-categoria">
+                    <h3>Ferramentas e ambiente</h3>
+                    <ul class="tech-chips">
+                        <li>Git / GitHub</li>
+                        <li>Docker</li>
+                        <li>GitHub Actions</li>
+                        <li>Linux</li>
+                    </ul>
+                </article>
             </div>
-            
-            <p class="font-medium mt-2">ELISSANDRA</p>
-            <div style="font-size: 18px;" class="mb-4">&lt;/&nbsp;Analista de Testes e QA ></div>
-            
-            <div class="containerContatos flex justify-center gap-4 mt-2">
-                <a href="https://www.linkedin.com/in/elissandra-silva-750b9b108/" target="_blank"><img src="assets/icon_linkedin.png"></a>
-                <a href="https://github.com/Elissdev" target="_blank"><img src="assets/icon_github.png"></a>
-                <a href="mailto:elissandra.dev@gmail.com"><img src="assets/icon_gmail2.png"></a>
+        </section>
+
+        <!-- 4. EXPERIÊNCIA PRÁTICA EM QA -->
+        <section class="secao" id="experiencia">
+            <h2 class="titulo-secao">Experiência prática em QA</h2>
+
+            <p class="secao-intro">
+                Durante minha experiência profissional, participei de atividades relacionadas à qualidade de
+                software, automação, documentação técnica, validação de funcionalidades e melhoria dos processos de
+                teste.
+            </p>
+
+            <div class="lista-projetos">
+                <article class="projeto-card">
+                    <h3>Documentação e processos de QA</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Padronizar processos de teste e tornar as etapas
+                        de desenvolvimento e validação mais claras e rastreáveis.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Criei Procedimentos Operacionais Padrão (POPs) e
+                        fluxogramas para documentar processos relacionados ao desenvolvimento, testes, revisão e
+                        validação de software.</p>
+                    <p class="card-tec"><span class="card-meta-label">Competências:</span> documentação técnica ·
+                        processos de QA · fluxogramas · padronização</p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Automação E2E com Cypress</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Automatizar a validação de fluxos críticos de
+                        aplicações web e facilitar a geração de evidências dos testes.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Desenvolvi e mantive cenários de testes E2E
+                        utilizando Cypress e JavaScript. Também trabalhei na geração de relatórios automatizados para
+                        facilitar a análise dos resultados pela equipe.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Cypress · JavaScript ·
+                        Mochawesome · Puppeteer</p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>CI com GitHub Actions</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Executar automaticamente os testes durante o
+                        processo de revisão do código.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Configurei uma rotina de CI utilizando GitHub
+                        Actions para executar testes automatizados durante Pull Requests, ajudando a identificar falhas
+                        antes da integração das alterações.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> GitHub Actions · PHPUnit · Git
+                    </p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Ambientes de teste com Docker</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Criar ambientes consistentes para execução dos
+                        testes e reduzir diferenças entre ambientes de desenvolvimento.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Utilizei Docker e Docker Compose para estruturar
+                        ambientes isolados contendo aplicações, ferramentas de teste e banco de dados.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Docker · Docker Compose ·
+                        Linux</p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Testes unitários e mocks</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Validar regras de negócio de forma isolada,
+                        reduzindo dependências externas durante a execução dos testes.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Trabalhei com testes unitários em PHP e utilizei
+                        mocks para isolar componentes e simular comportamentos de dependências durante os testes.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> PHP · PHPUnit · Prophecy</p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Análise de segurança</h3>
+                    <p><span class="card-meta-label">O desafio:</span> Identificar possíveis vulnerabilidades em
+                        aplicações e registrar os resultados das análises.</p>
+                    <p><span class="card-meta-label">O que fiz:</span> Realizei análises utilizando ferramentas do
+                        ecossistema OWASP e documentei os resultados encontrados para apoiar a identificação e correção
+                        de problemas.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologia:</span> OWASP ZAP</p>
+                    <span class="tag-privado">🔒 Projeto corporativo privado</span>
+                </article>
             </div>
-        </div>
+        </section>
+
+        <!-- 5. PROJETOS E LABORATÓRIO DE QA -->
+        <section class="secao" id="projetos">
+            <h2 class="titulo-secao">Projetos e laboratório de QA</h2>
+
+            <p class="secao-intro">
+                Além da experiência profissional, mantenho projetos próprios para praticar diferentes estratégias de
+                teste, automação e desenvolvimento de software.
+            </p>
+
+            <div class="lista-projetos">
+                <article class="projeto-card">
+                    <h3>Laboratório de Testes Unitários: PHPUnit</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Praticar testes unitários em aplicações PHP e
+                        explorar diferentes formas de validação de regras de negócio.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span> Criação de casos de teste, utilização de
+                        asserções e organização de uma suíte de testes para validação de comportamentos esperados e
+                        cenários de erro.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> PHP · PHPUnit</p>
+                    <a class="btn-projeto" href="https://github.com/Elissdev/projeto-phpunit" target="_blank"
+                        rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Ambiente de QA com Docker</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Criar um ambiente reproduzível para execução de
+                        aplicações e testes.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span> Estruturei containers, volumes e serviços
+                        necessários para executar uma aplicação e seu banco de dados de forma isolada.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Docker · Docker Compose ·
+                        Linux</p>
+                    <a class="btn-projeto" href="https://github.com/Elissdev/estudos-docker-qa" target="_blank"
+                        rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Simulador de Negociação: BDD</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Praticar BDD e transformar regras de negócio em
+                        cenários de teste compreensíveis.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span> Criação de cenários utilizando Gherkin e
+                        automação das validações em um ambiente isolado com Docker.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> BDD · Gherkin · Docker</p>
+                    <a class="btn-projeto"
+                        href="https://github.com/Elissdev/simulador-de-negocia-o-completo-com-BDD-e-Docker"
+                        target="_blank" rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Lab de Testes: Calculadora de Descontos</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Testar diferentes combinações de regras de
+                        negócio relacionadas a descontos.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span> Criei testes unitários e de integração
+                        para validar cálculos, regras de desconto e interação entre componentes.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> PHP · PHPUnit</p>
+                    <a class="btn-projeto" href="https://github.com/Elissdev/desconto-qa-lab" target="_blank"
+                        rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>Automação E2E: Fluxo de Registro</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Automatizar um fluxo de cadastro de usuários e
+                        validar diferentes comportamentos da interface.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span> Criei cenários automatizados para validar
+                        campos, máscaras, mensagens de erro e comportamento do fluxo de registro.</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Cypress · JavaScript</p>
+                    <a class="btn-projeto" href="https://github.com/Elissdev/cypress-automation-practice-form"
+                        target="_blank" rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+
+                <article class="projeto-card">
+                    <h3>QA Full Cycle: Projeto Firefly</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Aplicar diferentes técnicas de QA em uma
+                        aplicação real, desde a exploração manual até a automação de cenários.</p>
+                    <p><span class="card-meta-label">O que desenvolvi:</span></p>
+                    <ul class="card-lista">
+                        <li>Testes exploratórios</li>
+                        <li>Identificação e documentação de bugs</li>
+                        <li>Criação de Issues</li>
+                        <li>Validação de funcionalidades</li>
+                        <li>Testes de regressão</li>
+                        <li>Automação de cenários críticos</li>
+                    </ul>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> QA Manual · Cypress ·
+                        JavaScript · GitHub</p>
+                    <a class="btn-projeto" href="https://github.com/Elissdev/Testes-do-Firefly" target="_blank"
+                        rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 6. COMO EU TRABALHO -->
+        <section class="secao" id="como-trabalho">
+            <h2 class="titulo-secao">Como eu trabalho</h2>
+
+            <div class="texto-corrido">
+                <p>
+                    Meu processo de QA começa pela compreensão da regra de negócio e do comportamento esperado. A
+                    partir disso, identifico cenários positivos, negativos e casos de borda, executo os testes e
+                    registro evidências dos resultados.
+                </p>
+                <p>
+                    Quando encontro um problema, busco documentá-lo de forma clara, com passos para reprodução,
+                    comportamento esperado, comportamento atual e evidências.
+                </p>
+                <p>
+                    Quando faz sentido automatizar, transformo cenários repetitivos ou críticos em testes
+                    automatizados, buscando reduzir regressões e aumentar a confiabilidade do processo.
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. ATUALMENTE ESTUDANDO -->
+        <section class="secao" id="estudando">
+            <h2 class="titulo-secao">Atualmente estudando</h2>
+
+            <p class="secao-intro">
+                Estou continuamente ampliando meus conhecimentos em automação de testes, programação e engenharia de
+                software por meio de projetos práticos e estudos.
+            </p>
+
+            <ul class="tech-chips estudando-chips">
+                <li>JavaScript</li>
+                <li>Cypress</li>
+                <li>SQL</li>
+                <li>Testes automatizados</li>
+                <li>CI/CD</li>
+                <li>Desenvolvimento de software</li>
+            </ul>
+        </section>
+
+        <!-- 8. CONTATO -->
+        <section class="secao" id="contato">
+            <h2 class="titulo-secao">Vamos conversar?</h2>
+
+            <p class="secao-intro">
+                Estou aberta a oportunidades na área de QA, testes de software e tecnologia.
+            </p>
+
+            <div class="contato-grid">
+                <a class="contato-card" href="https://github.com/Elissdev" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/icon_github.png" alt="" aria-hidden="true">
+                    <h3>GitHub</h3>
+                    <p>Veja meus projetos e códigos.</p>
+                </a>
+
+                <a class="contato-card" href="https://www.linkedin.com/in/elissandra-silva-750b9b108/" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/icon_linkedin.png" alt="" aria-hidden="true">
+                    <h3>LinkedIn</h3>
+                    <p>Conheça minha trajetória profissional.</p>
+                </a>
+
+                <a class="contato-card" href="mailto:elissandra.dev@gmail.com">
+                    <img src="assets/icon_gmail2.png" alt="" aria-hidden="true">
+                    <h3>E-mail</h3>
+                    <p>Entre em contato comigo.</p>
+                </a>
+            </div>
+
+            <div class="contato-perfil">
+                <img class="fotoPerfil" src="assets/imagem_foto_perfil.png"
+                    alt="Foto de perfil de Elissandra Silva">
+                <p class="contato-nome">ELISSANDRA</p>
+                <p class="contato-cargo">&lt;/ Analista de Testes e QA Júnior &gt;</p>
+            </div>
+        </section>
+
+        <!-- 9. FOOTER -->
+        <footer class="rodape">
+            <p>© 2026 Elissandra Silva</p>
+            <p>Analista de Testes | QA Júnior</p>
+        </footer>
 
     </div>
 
