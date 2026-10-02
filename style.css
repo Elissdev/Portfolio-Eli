@@ -499,3 +499,69 @@ ul {
         animation: none !important;
     }
 }
+
+/* Destaques de projetos --------------------------------------------------- */
+.subtitulo-grupo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-destaque);
+    text-align: center;
+    margin: 0 0 1.1rem;
+}
+
+.subtitulo-grupo:not(:first-of-type) {
+    margin-top: 2.5rem;
+}
+
+.lista-projetos.destaques {
+    gap: 1.5rem;
+}
+
+.projeto-card.destaque {
+    border-color: rgba(0, 210, 223, 0.55);
+    background-color: rgba(0, 210, 223, 0.07);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.badge-destaque {
+    align-self: flex-start;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background-color: var(--cor-destaque);
+    color: #10222a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.card-sub {
+    margin-bottom: 0.35rem !important;
+}
+
+.card-evidencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--cor-borda);
+}
+
+.card-evidencias a {
+    color: var(--cor-destaque);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.card-evidencias a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .lista-projetos.destaques {
+        grid-template-columns: 1fr;
+    }
+}
