@@ -1,7 +1,7 @@
 describe('Testes de Sanidade do Portfólio', () => {
   it('Deve carregar a página e validar as seções principais', () => {
     // 1. Acessa o ambiente de produção
-    cy.visit('https://elissandra.codamos.com.br/')
+    cy.visit('/')
 
     // 2. Hero: título, subtítulo e botões principais
     cy.contains('Eli — Analista de Testes | QA').should('be.visible')
