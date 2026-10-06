@@ -602,6 +602,25 @@ ul {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+.card-demo {
+    display: block;
+    margin: 0.2rem 0 0.9rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.card-demo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+
+.card-demo:hover img {
+    transform: scale(1.025);
+}
+
 .badge-destaque {
     align-self: flex-start;
     margin-bottom: 0.6rem;
