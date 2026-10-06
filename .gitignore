@@ -4,3 +4,6 @@
 cypress/reports/
 cypress/screenshots/
 cypress/videos/
+
+# Dependências (não versionar)
+node_modules/
