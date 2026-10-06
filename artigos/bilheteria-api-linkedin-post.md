@@ -17,6 +17,7 @@ O que eu fiz como QA Automation:
 A maior lição: portfólio não é quantidade de projetos. É um projeto que funciona de verdade, que a pessoa clica e usa.
 
 Demo: https://bilheteria-api-uc0j.onrender.com
+Case completo: https://elissandra.codamos.com.br/case-bilheteria/
 Código: https://github.com/Elissdev/bilheteria-api
 
 #QA #QualityAssurance #QAAutomation #SDET #TestesAutomatizados #NodeJS #PostgreSQL #Docker
