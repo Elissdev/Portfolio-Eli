@@ -6,7 +6,7 @@ describe('Testes de Sanidade do Portfólio', () => {
     // 2. Hero: título, subtítulo e botões principais
     cy.contains('Eli, QA Automation | SDET').should('be.visible')
     cy.contains('Automação de testes E2E e de API, CI/CD e IA aplicada à qualidade.').should('be.visible')
-    cy.get('a[href="assets/curriculo-elissandra-silva-qa-junior.pdf"]').should('exist')
+    cy.get('a[href="assets/curriculo-elissandra-silva-qa-automation.pdf"]').should('exist')
     cy.get('a[href="#projetos"]').contains('Conheça meus projetos').should('be.visible')
 
     // 3. Seção Sobre mim

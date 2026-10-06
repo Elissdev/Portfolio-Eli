@@ -20,6 +20,13 @@ O CSS utilitário é gerado localmente a partir de `src/input.css` (Tailwind v4)
 
 > Depois de alterar classes utilitárias no `index.html`, rode `npm run build:css` para atualizar o `output.css`.
 
+## Build do currículo (PDF)
+O currículo tem uma fonte versionada em `curriculo/curriculo.html` (layout A4 e texto selecionável, amigável a ATS):
+
+* Gerar o PDF: `npm run build:cv`
+
+> Requer Google Chrome ou Chromium instalado. O PDF final é salvo em `assets/curriculo-elissandra-silva-qa-automation.pdf`.
+
 ## Arquitetura do Processo de Qualidade
 Para manter esta vitrine funcionando e dar visibilidade à qualidade do projeto, implementei uma esteira de automação que roda a cada atualização de código:
 1.  **Sanity Check Automatizado:** O Cypress sobe o site localmente e valida elementos visuais críticos e os links de contato e projetos a cada push.
