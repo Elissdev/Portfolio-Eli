@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/estrela.png" type="image/png">
+    <title>Case da Bilheteria API | Elissandra Silva, QA Automation e SDET Júnior</title>
+    <meta name="description"
+        content="Como transformei um laboratório de testes de backend em um produto no ar: estoque atômico, 100% de cobertura, Swagger, CI, Docker e deploy com Render e Neon.">
+    <link rel="canonical" href="https://elissandra.codamos.com.br/case-bilheteria/">
+    <meta name="author" content="Elissandra Silva">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://elissandra.codamos.com.br/case-bilheteria/">
+    <meta property="og:site_name" content="Portfólio de QA Automation | Elissandra Silva">
+    <meta property="og:title" content="Case da Bilheteria API: de um laboratório de testes a um produto no ar">
+    <meta property="og:description"
+        content="Estoque atômico no banco, 100% de cobertura com Jest e Supertest, Swagger, CI no GitHub Actions e deploy com Docker, Render e Neon.">
+    <meta property="og:image" content="https://elissandra.codamos.com.br/assets/bilheteria-demo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case da Bilheteria API | Elissandra Silva">
+    <meta name="twitter:description"
+        content="De um laboratório de testes a um produto no ar: regras de negócio, cobertura total e deploy automatizado.">
+    <meta name="twitter:image" content="https://elissandra.codamos.com.br/assets/bilheteria-demo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1D232E">
+    <link rel="stylesheet" href="../style.css?v=8">
+    <link rel="stylesheet" href="../output.css">
+</head>
+
+<body class="text-white font-serif">
+
+    <div class="containerGlobal">
+
+        <!-- CABEÇALHO DO CASE -->
+        <header class="hero hero-case">
+            <p class="hero-eyebrow">Case de QA Automation</p>
+
+            <h1 class="hero-titulo">De um laboratório de testes a um produto no ar</h1>
+
+            <img src="../assets/forma_destaque_texto.png" alt="" aria-hidden="true" class="hero-divisor">
+
+            <p class="hero-subtitulo">O case da Bilheteria API</p>
+
+            <p class="hero-texto">
+                Como transformei um experimento de QA com um único endpoint em uma API REST completa,
+                publicada, testada de ponta a ponta e monitorada em produção.
+            </p>
+
+            <nav class="hero-botoes" aria-label="Ações do case">
+                <a class="btn btn-secundario" href="../index.html#projetos">Voltar ao portfólio</a>
+                <a class="btn btn-primario" href="https://bilheteria-api-uc0j.onrender.com" target="_blank"
+                    rel="noopener noreferrer">Ver demo ao vivo</a>
+                <a class="btn btn-secundario" href="https://github.com/Elissdev/bilheteria-api" target="_blank"
+                    rel="noopener noreferrer">Ver no GitHub</a>
+            </nav>
+        </header>
+
+        <section class="secao">
+            <article class="artigo">
+                <p>
+                    Quando comecei, a Bilheteria API era um laboratório de QA: um endpoint, três testes e um README que
+                    prometia um CRUD que não existia. Este texto conta como transformei aquele experimento em um produto
+                    publicado, com demo ao vivo, cobertura total de testes e deploy automatizado.
+                </p>
+
+                <h2>O ponto de partida</h2>
+                <p>
+                    O projeto nasceu como prática de testes de backend. Tinha um <code>POST /eventos</code>, três testes
+                    com mock e uma boa história de cobertura e carga. Só que o README anunciava um "sistema CRUD" e a API
+                    tinha exatamente uma rota.
+                </p>
+                <p>
+                    Esse tipo de descompasso é o pior inimigo de um portfólio. Quem avalia descobre em trinta segundos
+                    que o texto promete mais do que o código entrega, e o resto do trabalho perde credibilidade.
+                </p>
+
+                <h2>A decisão: virar produto, não só publicar</h2>
+                <p>
+                    O caminho fácil era dar deploy do que existia. Optei por transformar em algo de verdade, com decisões
+                    de engenharia e não apenas rotas.
+                </p>
+                <p>A API passou a ter:</p>
+                <ul>
+                    <li><code>GET /health</code></li>
+                    <li><code>GET /eventos</code> e <code>GET /eventos/:id</code></li>
+                    <li><code>POST /eventos</code></li>
+                    <li><code>PUT /eventos/:id</code></li>
+                    <li><code>DELETE /eventos/:id</code></li>
+                    <li><code>POST /eventos/:id/comprar</code></li>
+                </ul>
+                <p>
+                    E junto disso vieram validação de payload, tratamento explícito de erro, documentação e uma vitrine.
+                </p>
+
+                <h2>A regra de negócio que importa</h2>
+                <p>
+                    O coração do sistema é a compra de ingressos. O jeito ingênuo seria ler o estoque, checar em
+                    JavaScript, subtrair e salvar. Isso quebra sob concorrência: duas compras simultâneas leem o mesmo
+                    valor e vendem o mesmo ingresso duas vezes.
+                </p>
+                <p>A solução foi mover a regra para o banco:</p>
+                <pre><code>const atualizados = await db('eventos')
+  .where({ id: req.params.id })
+  .andWhere('ingressos_disponiveis', '&gt;=', quantidade)
+  .decrement('ingressos_disponiveis', quantidade)
+  .returning('*');</code></pre>
+                <p>
+                    O próprio Postgres garante a consistência. Se a linha não for atualizada, a API distingue os casos:
+                    evento inexistente devolve 404, estoque insuficiente devolve 409 Conflict.
+                </p>
+                <p>
+                    Regra de negócio que depende de estado compartilhado pertence ao banco, não a um <code>if</code>.
+                </p>
+
+                <h2>Testar de verdade</h2>
+                <p>
+                    Levei a suíte a 33 testes com 100% de cobertura de statements, branches, functions e lines na camada
+                    de rotas. Uso Jest, Supertest e um dublê de banco que imita o query builder do Knex.
+                </p>
+                <p>Dois detalhes fazem diferença:</p>
+                <ol>
+                    <li>Os testes rodam em milissegundos e sem infraestrutura, o que os torna fáceis de manter.</li>
+                    <li>
+                        Existe um <code>coverageThreshold</code> no Jest que quebra o build se a cobertura cair.
+                        Cobertura que não é cobrada no CI não se mantém por muito tempo.
+                    </li>
+                </ol>
+                <pre><code>"jest": {
+  "coverageThreshold": {
+    "global": { "branches": 100, "functions": 100, "lines": 100, "statements": 100 }
+  }
+}</code></pre>
+
+                <h2>O bug que só apareceu em produção</h2>
+                <p>Aqui está o aprendizado mais valioso de todo o projeto.</p>
+                <p>
+                    Com todos os testes verdes, o script de seed estava quebrado. Ele importava o módulo de banco com um
+                    caminho relativo errado. Os testes passavam porque eles mockam justamente esse módulo, então o
+                    caminho nunca era exercitado.
+                </p>
+                <p>O erro só apareceu quando rodei o seed contra o banco real, o Neon:</p>
+                <pre><code>Error: Cannot find module './db'</code></pre>
+                <p>
+                    A lição: mock isola, mas também esconde. Testes com dublê não substituem validar o caminho real de
+                    integração. Por isso passei a rodar um smoke test contra o banco de verdade antes de considerar o
+                    deploy concluído.
+                </p>
+
+                <h2>Publicar faz parte do trabalho</h2>
+                <p>Código que ninguém consegue usar não demonstra nada. Então completei o ciclo:</p>
+                <ul>
+                    <li>Documentação interativa com Swagger em <code>/docs</code>, gerada a partir de uma especificação OpenAPI.</li>
+                    <li>Uma vitrine em página única que consome a própria API, para a pessoa criar um evento e comprar um ingresso na tela.</li>
+                    <li>Dockerfile e <code>render.yaml</code> para o deploy reproduzível.</li>
+                    <li>CI no GitHub Actions rodando a suíte e publicando o relatório de cobertura a cada push.</li>
+                    <li>Deploy no Render com Postgres gerenciado no Neon.</li>
+                    <li>Um monitor de disponibilidade pingando o <code>/health</code> a cada cinco minutos, o que mantém o serviço acordado no plano gratuito e alerta em caso de queda.</li>
+                </ul>
+
+                <h2>O que eu levo disso</h2>
+                <p>
+                    Portfólio não é quantidade de projetos. É um projeto que funciona de verdade, que alguém abre, usa e
+                    entende.
+                </p>
+                <p>Para quem está começando em QA, três conclusões ficaram claras:</p>
+                <ol>
+                    <li>Regra de negócio e caso de teste são a mesma coisa vista de ângulos diferentes. Entender a regra é o primeiro passo para testá-la.</li>
+                    <li>Automação sem disciplina de cobertura vira decoração. O threshold no CI é o que sustenta o resultado.</li>
+                    <li>Testar contra o ambiente real, nem que seja uma vez, encontra o que o mock esconde.</li>
+                </ol>
+
+                <div class="artigo-cta">
+                    <p>O projeto está no ar e o código é aberto:</p>
+                    <nav class="hero-botoes" aria-label="Links do projeto">
+                        <a class="btn btn-primario" href="https://bilheteria-api-uc0j.onrender.com" target="_blank"
+                            rel="noopener noreferrer">Demo ao vivo</a>
+                        <a class="btn btn-secundario" href="https://bilheteria-api-uc0j.onrender.com/docs" target="_blank"
+                            rel="noopener noreferrer">Documentação (Swagger)</a>
+                        <a class="btn btn-secundario" href="https://github.com/Elissdev/bilheteria-api" target="_blank"
+                            rel="noopener noreferrer">Repositório</a>
+                    </nav>
+                </div>
+            </article>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="rodape">
+            <p>© 2026 Elissandra Silva</p>
+            <p>QA Automation | SDET Júnior</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
