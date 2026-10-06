@@ -29,7 +29,6 @@ describe('Testes de Sanidade do Portfólio', () => {
 
     // 6. Projetos e laboratório de QA
     cy.contains('Projetos e laboratório de QA').should('be.visible')
-    cy.contains('Calculadora de Descontos').should('be.visible')
     cy.contains('Projetos em destaque').should('be.visible')
     cy.contains('Destaque').should('be.visible')
     cy.contains('Ver todos os projetos e laboratórios').click()
