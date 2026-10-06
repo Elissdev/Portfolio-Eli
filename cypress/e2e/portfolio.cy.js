@@ -14,10 +14,17 @@ describe('Testes de Sanidade do Portfólio', () => {
     // 4. Seção Tecnologias e ferramentas
     cy.contains('Tecnologias e ferramentas').should('be.visible')
     cy.contains('Testes exploratórios').should('be.visible')
+    cy.contains('Testes de API').should('be.visible')
+    cy.contains('IA aplicada ao QA').should('be.visible')
+    cy.contains('Bruno').should('be.visible')
+    cy.contains('Apiário Dev').should('be.visible')
 
     // 5. Experiência prática em QA (projetos corporativos)
     cy.contains('Experiência prática em QA').should('be.visible')
+    cy.contains('Codamos').should('be.visible')
     cy.contains('Projeto corporativo privado').should('exist')
+    cy.contains('Indicadores e relatórios de qualidade').should('be.visible')
+    cy.contains('IA aplicada ao QA com o Apiário Dev').should('be.visible')
 
     // 6. Projetos e laboratório de QA
     cy.contains('Projetos e laboratório de QA').should('be.visible')
