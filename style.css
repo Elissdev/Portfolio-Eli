@@ -255,13 +255,13 @@ ul {
 .lista-projetos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    align-items: start;
     gap: 1.25rem;
 }
 
 .projeto-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
     padding: 1.5rem;
     background-color: var(--cor-superficie);
     border: 1px solid var(--cor-borda);
