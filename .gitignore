@@ -7,3 +7,6 @@ cypress/videos/
 
 # Dependências (não versionar)
 node_modules/
+
+# Rascunhos de artigos (mantidos apenas localmente)
+artigos/
