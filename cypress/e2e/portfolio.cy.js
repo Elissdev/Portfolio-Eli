@@ -31,6 +31,10 @@ describe('Testes de Sanidade do Portfólio', () => {
     cy.contains('Calculadora de Descontos').should('be.visible')
     cy.contains('Projetos em destaque').should('be.visible')
     cy.contains('Destaque').should('be.visible')
+    cy.contains('Bilheteria API').should('be.visible')
+    cy.contains('API de Catraca Virtual').should('be.visible')
+    cy.contains('Apiário Dev como provider nativo').should('be.visible')
+    cy.contains('tl;dr').should('be.visible')
 
     // 7. Como eu trabalho / Atualmente estudando
     cy.contains('Como eu trabalho').should('be.visible')
