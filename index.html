@@ -347,20 +347,23 @@
 
                 <article class="projeto-card destaque">
                     <span class="badge-destaque">Destaque</span>
-                    <h3>Testes de API: Bilheteria API</h3>
-                    <p><span class="card-meta-label">Objetivo:</span> Testar um backend em profundidade, indo além da interface, com foco em cobertura, mocks e performance.</p>
-                    <p class="card-sub"><span class="card-meta-label">Práticas de QA:</span></p>
+                    <h3>Bilheteria API: do zero ao deploy</h3>
+                    <p><span class="card-meta-label">Objetivo:</span> Construir e publicar uma API REST completa, indo além da interface, com foco em regras de negócio, cobertura de testes, documentação e performance.</p>
+                    <p class="card-sub"><span class="card-meta-label">Práticas de QA e engenharia:</span></p>
                     <ul class="card-lista">
-                        <li>Mocks de banco de dados com Jest (isolamento)</li>
-                        <li>100% de cobertura, incluindo tratativas de erro</li>
-                        <li>Testes de API com Supertest</li>
+                        <li>CRUD completo com compra de ingressos e controle de estoque atômico (409 ao esgotar)</li>
+                        <li>33 testes com 100% de cobertura (Jest + Supertest + mocks de banco)</li>
+                        <li>Documentação interativa com Swagger (OpenAPI 3)</li>
                         <li>Teste de carga com Autocannon (~1.7k req/s)</li>
+                        <li>CI no GitHub Actions e deploy com Docker (Render + Neon)</li>
                     </ul>
-                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Node.js · Express · PostgreSQL · Jest · Supertest · Autocannon · Docker</p>
+                    <p class="card-tec"><span class="card-meta-label">Tecnologias:</span> Node.js · Express · PostgreSQL · Jest · Supertest · Swagger · Autocannon · Docker · GitHub Actions</p>
                     <p class="card-evidencias">
+                        <a href="https://bilheteria-api-uc0j.onrender.com" target="_blank" rel="noopener noreferrer">Demo ao vivo</a>
+                        <a href="https://bilheteria-api-uc0j.onrender.com/docs" target="_blank" rel="noopener noreferrer">Swagger</a>
                         <a href="https://github.com/Elissdev/bilheteria-api" target="_blank" rel="noopener noreferrer">Repositório</a>
                     </p>
-                    <a class="btn-projeto" href="https://github.com/Elissdev/bilheteria-api" target="_blank" rel="noopener noreferrer">Ver projeto no GitHub →</a>
+                    <a class="btn-projeto" href="https://bilheteria-api-uc0j.onrender.com" target="_blank" rel="noopener noreferrer">Ver demo ao vivo →</a>
                 </article>
 
             </div>
