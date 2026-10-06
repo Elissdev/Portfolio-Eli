@@ -200,6 +200,38 @@ ul {
     color: var(--cor-texto-suave);
 }
 
+/* Faixa de qualidade deste site ----------------------------------------- */
+.faixa-qa {
+    max-width: 900px;
+    margin: 0 auto 1.75rem;
+    padding: 0.9rem 1.25rem;
+    text-align: center;
+    background-color: var(--cor-destaque-suave);
+    border: 1px solid rgba(0, 210, 223, 0.35);
+    border-radius: 14px;
+}
+
+.faixa-qa p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--cor-texto-suave);
+}
+
+.faixa-qa strong {
+    color: #ffffff;
+}
+
+.faixa-qa a {
+    color: var(--cor-destaque);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.faixa-qa a:hover {
+    color: #ffffff;
+}
+
 .texto-corrido {
     max-width: 780px;
     margin: 0 auto;
@@ -256,6 +288,52 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 1.25rem;
+}
+
+.projetos-completos {
+    margin-top: 0.5rem;
+}
+
+.projetos-completos > summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+    list-style: none;
+    padding: 0.75rem 1.4rem;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    color: var(--cor-destaque);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projetos-completos > summary::-webkit-details-marker {
+    display: none;
+}
+
+.projetos-completos > summary:hover {
+    border-color: rgba(0, 210, 223, 0.6);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.projetos-completos > summary::after {
+    content: "▾";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.projetos-completos[open] > summary {
+    margin-bottom: 1.75rem;
+}
+
+.projetos-completos[open] > summary::after {
+    transform: rotate(180deg);
 }
 
 .projeto-card {
