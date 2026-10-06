@@ -13,7 +13,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal e, mais impo
 * **Integração Contínua (CI):** GitHub Actions
 
 ## Build do CSS (Tailwind)
-O CSS utilitário é gerado localmente a partir de `src/input.css` (Tailwind v4) — **não usamos CDN em produção**.
+O CSS utilitário é gerado localmente a partir de `src/input.css` (Tailwind v4); **não usamos CDN em produção**.
 
 * Gerar uma vez (minificado): `npm run build:css`
 * Rebuild automático durante o desenvolvimento: `npm run watch:css`
