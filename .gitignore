@@ -1,1 +1,6 @@
 .worktrees/
+
+# Artefatos gerados pela execução dos testes (Cypress)
+cypress/reports/
+cypress/screenshots/
+cypress/videos/

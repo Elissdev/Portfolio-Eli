@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Fontes de conteúdo que o Tailwind deve escanear em busca de classes utilitárias. */
+@source "../index.html";

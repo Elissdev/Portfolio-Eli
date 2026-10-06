@@ -1,8 +1,8 @@
-# Portfólio de QA | Elissandra Silva (Eli)
+# Portfólio de QA Automation | Elissandra Silva (Eli)
 
 [![Cypress UI Tests](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml/badge.svg)](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml)
 
-Sou a Elissandra (Eli), Analista de Testes e QA Júnior. Trabalho com testes manuais e automação e uso este repositório também como laboratório de qualidade.
+Sou a Elissandra (Eli), QA Automation e SDET Júnior. Trabalho com automação de testes e qualidade de software e uso este repositório também como laboratório de qualidade.
 
 Este repositório contém o código-fonte do meu portfólio pessoal e, mais importante, a **suíte de testes automatizados** e a **esteira de CI/CD** que estruturam e validam a qualidade deste projeto em tempo real.
 
@@ -11,6 +11,14 @@ Este repositório contém o código-fonte do meu portfólio pessoal e, mais impo
 * **Automação E2E:** Cypress
 * **Relatórios de Teste:** Mochawesome & Puppeteer (Geração de PDF)
 * **Integração Contínua (CI):** GitHub Actions
+
+## Build do CSS (Tailwind)
+O CSS utilitário é gerado localmente a partir de `src/input.css` (Tailwind v4) — **não usamos CDN em produção**.
+
+* Gerar uma vez (minificado): `npm run build:css`
+* Rebuild automático durante o desenvolvimento: `npm run watch:css`
+
+> Depois de alterar classes utilitárias no `index.html`, rode `npm run build:css` para atualizar o `output.css`.
 
 ## Arquitetura do Processo de Qualidade
 Para manter esta vitrine funcionando e dar visibilidade à qualidade do projeto, implementei uma esteira de automação que roda a cada atualização de código:
@@ -25,9 +33,11 @@ Quer ver o robô do Cypress rodando este projeto na sua máquina? Siga os passos
    `git clone https://github.com/Elissdev/Portfolio-Eli.git`
 2. Entre na pasta do projeto e instale as dependências de teste:
    `npm install`
-3. Abra a interface do Cypress:
+3. Gere o CSS do site:
+   `npm run build:css`
+4. Abra a interface do Cypress:
    `npx cypress open`
-4. Selecione "E2E Testing" e rode o arquivo `portfolio.cy.js`.
+5. Selecione "E2E Testing" e rode o arquivo `portfolio.cy.js`.
 
 ## Bora conversar?
 [LinkedIn](https://www.linkedin.com/in/elissandra-silva-750b9b108/) | [GitHub](https://github.com/Elissdev) | [E-mail](mailto:elissandra.dev@gmail.com)
