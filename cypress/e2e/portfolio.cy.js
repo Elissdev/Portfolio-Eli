@@ -5,7 +5,8 @@ describe('Testes de Sanidade do Portfólio', () => {
 
     // 2. Hero: título, subtítulo e botões principais
     cy.contains('Eli, Analista de Testes | QA').should('be.visible')
-    cy.contains('Testes manuais, automação e qualidade de software.').should('be.visible')
+    cy.contains('Testes manuais e automatizados, testes de API e IA aplicada ao QA.').should('be.visible')
+    cy.get('a[href="assets/curriculo-elissandra-silva-qa-junior.pdf"]').should('exist')
     cy.get('a[href="#projetos"]').contains('Conheça meus projetos').should('be.visible')
 
     // 3. Seção Sobre mim
@@ -31,6 +32,7 @@ describe('Testes de Sanidade do Portfólio', () => {
     cy.contains('Calculadora de Descontos').should('be.visible')
     cy.contains('Projetos em destaque').should('be.visible')
     cy.contains('Destaque').should('be.visible')
+    cy.contains('Ver todos os projetos e laboratórios').click()
     cy.contains('Bilheteria API').should('be.visible')
     cy.contains('API de Catraca Virtual').should('be.visible')
     cy.contains('Apiário Dev como provider nativo').should('be.visible')
