@@ -8,13 +8,21 @@ jobs:
       - name: Baixar o código
         uses: actions/checkout@v4
 
+      - name: Subir o site local
+        run: |
+          nohup python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/site.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:4173/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "O site não respondeu em 30 segundos."
+          cat /tmp/site.log
+          exit 1
+
       - name: Rodar os testes do Cypress
         uses: cypress-io/github-action@v6
         with:
           build: npm run build:css
-          start: python3 -m http.server 4173 --bind 127.0.0.1
-          wait-on: 'http://127.0.0.1:4173/'
-          wait-on-timeout: 60
         env:
           CYPRESS_BASE_URL: http://127.0.0.1:4173/
 
