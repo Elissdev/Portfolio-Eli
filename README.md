@@ -1,8 +1,8 @@
-# Portfólio de QA Automation | Elissandra Silva (Eli)
+# Portfólio de suporte a aplicações e QA | Elissandra Silva (Eli)
 
 [![Cypress UI Tests](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml/badge.svg)](https://github.com/Elissdev/Portfolio-Eli/actions/workflows/cypress.yml)
 
-Sou a Elissandra (Eli), QA Automation e SDET Júnior. Trabalho com automação de testes e qualidade de software e uso este repositório também como laboratório de qualidade.
+Sou a Elissandra (Eli). Trabalho com suporte a aplicações e qualidade de software, e uso este repositório também como laboratório de qualidade.
 
 Este repositório contém o código-fonte do meu portfólio pessoal e, mais importante, a **suíte de testes automatizados** e a **esteira de CI/CD** que estruturam e validam a qualidade deste projeto em tempo real.
 
@@ -25,7 +25,7 @@ O currículo tem uma fonte versionada em `curriculo/curriculo.html` (layout A4 e
 
 * Gerar o PDF: `npm run build:cv`
 
-> Requer Google Chrome ou Chromium instalado. O PDF final é salvo em `assets/curriculo-elissandra-silva-qa-automation.pdf`.
+> Requer Google Chrome ou Chromium instalado. O PDF final é salvo em `assets/curriculo-elissandra-silva-suporte-qa.pdf`.
 
 ## Arquitetura do Processo de Qualidade
 Para manter esta vitrine funcionando e dar visibilidade à qualidade do projeto, implementei uma esteira de automação que roda a cada atualização de código:

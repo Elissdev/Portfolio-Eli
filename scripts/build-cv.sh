@@ -9,7 +9,7 @@ set -euo pipefail
 
 RAIZ="$(cd "$(dirname "$0")/.." && pwd)"
 FONTE="$RAIZ/curriculo/curriculo.html"
-SAIDA="$RAIZ/assets/curriculo-elissandra-silva-qa-automation.pdf"
+SAIDA="$RAIZ/assets/curriculo-elissandra-silva-suporte-qa.pdf"
 
 if [ ! -f "$FONTE" ]; then
     echo "Fonte não encontrada: $FONTE" >&2
