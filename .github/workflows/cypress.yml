@@ -13,7 +13,7 @@ jobs:
         with:
           build: npm run build:css
           start: python3 -m http.server 4173 --bind 127.0.0.1
-          wait-on: 'http-get://127.0.0.1:4173/'
+          wait-on: 'http://127.0.0.1:4173/'
           wait-on-timeout: 60
         env:
           CYPRESS_BASE_URL: http://127.0.0.1:4173/
