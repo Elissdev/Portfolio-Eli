@@ -12,15 +12,19 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm run build:css
-          start: python3 -m http.server 4173
-          wait-on: 'http://localhost:4173'
+          start: python3 -m http.server 4173 --bind 127.0.0.1
+          wait-on: 'http-get://127.0.0.1:4173/'
           wait-on-timeout: 60
         env:
-          CYPRESS_BASE_URL: http://localhost:4173/
+          CYPRESS_BASE_URL: http://127.0.0.1:4173/
 
       - name: Gerar Relatório em PDF
         if: always()
         run: |
+          if [ ! -f cypress/reports/mochawesome.html ]; then
+            echo "Relatório não encontrado. Etapa de PDF ignorada."
+            exit 0
+          fi
           npm install puppeteer
           DATA=$(date +%Y-%m-%d)
           ARQUIVO="cypress/reports/${DATA}-portfolio-eli.pdf"
