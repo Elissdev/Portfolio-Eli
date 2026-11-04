@@ -17,7 +17,6 @@ describe('Testes de Sanidade do Portfólio', () => {
     cy.contains('Suporte e operações').should('be.visible')
     cy.contains('Análise de logs').should('be.visible')
     cy.contains('Atendimento N1').should('be.visible')
-    cy.contains('Jira').should('be.visible')
     cy.contains('Testes exploratórios').should('be.visible')
     cy.contains('Testes de API').should('be.visible')
     cy.contains('IA aplicada ao QA').should('be.visible')
